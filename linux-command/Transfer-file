@@ -1,0 +1,5 @@
+-----------------how to transfer file via 'nc' command -------------
+Host-Device command => nc -lnvp <port-no.> > <give-file-name-to-save> (nc -lnvp 4545 > sample.txt)
+Target-Device command => nc  <target-device-IP> <port-no.> < <transfer-file-name> (nc 10.10.12.13 4545 < domain.pcap)
+
+Please note: Port number should be similar on both commands. 
