@@ -1,0 +1,60 @@
+----------------------What is Wireshark and why it is important----------------------------
+Wireshark is an open-source, cross platform network packet analyser tool capable of sniffing and investingating live
+traffic and inspecting packet captures (PCAP). 
+
+PLEASE NOTE: Type A DNS query is counted as IP4 and type AAAA as a IP6
+
+IP
+ip=show all IP packets
+ip.src==x.x.x.x
+ip.dst==x.x.x.x
+ip.addr==x.x.x.x
+--------------------------------------------------------
+TCP
+tcp.port==80
+tcp.srcport==445
+tcp.dstport==856
+--------------------------------------------------------
+UDP
+udp.port==80
+udp.srcport==80
+udp.dstport==856
+-------------------------------------------------------
+http
+http.repsonse.code==200
+http.request.method==”GET”
+http.request.method==”POST”
+------------------------------------------------------
+dns
+dns.flags.response==0
+dns.flags.response==1
+dns.qry.type==1
+---------------------------------------------------
+contains
+Http.server contains “Apache”
+------------------------------------------------
+In 
+Tcp.port in {80 443 
+8080}
+upper
+upper(http.server) contains ‘APACHE”
+lower
+lower(http.server) contains ‘apache”
+string
+string(frame.number) matches “[12566]$”
+------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
