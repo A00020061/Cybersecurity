@@ -43,8 +43,33 @@ lower(http.server) contains ‘apache”
 string
 string(frame.number) matches “[12566]$”
 ------------------------------------------------
+-------------------NMAP-Scans------------------
+Three-way-handshake(SYN, ACK, RST, and FIN)
+Here's how it works"
+The initiating device sends SYN packets to specific ports on the target device.
+if a port is open, the target device respond with a SYN-ACK packet, acknowledgin the syn and indication it's ready to establish a connection.
+If a port is closed, the target device respond with a RST (reset) packet, indicating that no service is listening on that port.
+if a port is filtered or blocked by a firewall, the initiating device might receive no response or an ICMP unreachable message indicating that the ports is unreachable.
 
+Filter Commands: tcp.flags.syn == 1 (for SYN request)
+tcp.flags.ACK == 1  (for ACK request)
+tcp.flags.reset == 1 (for Reset request)
 
+---------------------------------------------
+----------------ARP-Poisoning/Man-in-the-middle----------
+Please see the images on REDEME file related to MITM attack.
+Media Access Control Address are essential for communication within a local network. while IP addresses handle routing and addressing at the network layer (Layer 3), 
+MAC addresses operate at the data link layer (layer 2) ad are crucial for delivering data packets within the same local network. When a device wants to send data to 
+another device on the same subnet, it needs the MAC address to create a frame that can be delivered across the local network segment. 
+Address resolution protocol (ARP) is the protcol responsible for translating IP addresses into MAC addresses. When a device does not have the MAC address in its cache, 
+it sends an ARP request which broadcast message sent to all devices within the same local network segment.
+The device that holds the requested IP address respond to the ARP request directly to the sender, providing the MAC address.
+ARP Spoofing filter commands -----------
+1: arp (normal arp filter commands)
+2: arp.opcode == 1 (filter the requested mac address packets)
+3: arp.opcode == 2 (filter the responded mac address packetes)
+4: arp.dst.hw_mac == 00.00.00.00.00.00 (hw_mac stand for hardware-MAC, when device want to know the target device mac address so fiil with 00.00.00.00.00.00) 
+----------------------------------------------------------
 
 
 
