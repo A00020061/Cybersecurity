@@ -70,9 +70,28 @@ ARP Spoofing filter commands -----------
 3: arp.opcode == 2 (filter the responded mac address packetes)
 4: arp.dst.hw_mac == 00.00.00.00.00.00 (hw_mac stand for hardware-MAC, when device want to know the target device mac address so fiil with 00.00.00.00.00.00) 
 ----------------------------------------------------------
-
-
-
+----------------DHCP NetBIOS and Kerberos------------------
+DHCP protocol is the technology responsible for managing automatic IP address and requried communication parameters assignment.
+DHCP filter commands:
+1: dhcp (Global to filter all dhcp packets)
+2: dhcp.option.dhcp == 3 (dhcp request packets)
+3: dhcp.option.dhcp == 5 (packets represent the accepted requests)
+4: dhcp.option.dhcp == 6 (packets represents denied requests)
+dhcp.option.dhcp == 3 && dhcp.option.hostname contains "Galaxy" (Waht is the MAC address of the host "Galaxy A30".
+-------------------------------------------------------------
+---------------------NetBIOS-------------------
+NetBIOS is the technology responsible for allowing applications on different hosts to communicate with each other.
+NetBIOS filter commands:
+1: nbns (Global to filter all nbns request packets)
+2: nbns.flags.opcode == 5 (code 5 is for registration request}
+3: nbns.flags.opcode == 50 && dhcp.option.requested_ip_address == 128.456.595.487 (which host requested the iP address 128.456.595.487)
+----------------------------------------------------------------
+-------------------Kerberos---------------------------------
+Kerberos is the default authentication service to microsoft windows domains. It is responsible for authenitcating service requests between two or more computers over the untrusted network. The ultimate aim is to prove identity securlty. 
+Kerberos filter commands:
+1: Kerberos (Global to filter all kerberos request packets)
+2: Kerberos.CNameString contains "u5" (what is the IP address of the user "u5")
+---------------------------------------------------------------
 
 
 
