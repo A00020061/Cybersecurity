@@ -92,13 +92,51 @@ Kerberos filter commands:
 1: Kerberos (Global to filter all kerberos request packets)
 2: Kerberos.CNameString contains "u5" (what is the IP address of the user "u5")
 ---------------------------------------------------------------
+----------------------------ICMP and DNS Tunnelling (forwarding)-------------------
+1: ICMP (Globar search)
+2: data.len > 64 and icmp (This command filters the all icmp packets have more than 64 bytes data length.)
+3: data.len>64 and (icmp contains 'ssh' or icmp contains 'http' or icmp contains 'ftp' or icmp contains 'tcp') {This command will filter the icmp packets includes above protocol)
 
+DNS Tunnelling:
+1:dns (Global search)
+2: dns contains 'dnscat'
+3: dns.qry.name.len > 15 and !mdns (!mdns disable the local dns query)
+MDNS (Multicast DNS is a protocol used in local networks to provide domain name resolution services without the need for a central dns server. it allows devices on the same network to discover each other's presence and services by broadcasting and receiving DNS-like queries and responses using multicast IP addresses. 
 
-
-
-
-
-
-
-
-
+----------------------------------------FTP protocol analysis -----------------
+File Transfer protocol is designed to transfer files with ease, so it focuses on simplicity rather than security. As a result of this, using this protocol in unsecured environment could create security issues like: 
+1: MITM Attack
+2: Phishing
+3: Malware Planting
+4: Data exfiltration
+5: Credential stealing and unauthorised access
+FTP commands: 
+1: USER=>username (ftp.request.command == "USER")
+2: PASS => Password (ftp.request.command == "PASS")
+3: CWD => Current work directory (ftp.request.command == "CWD")
+4: LIST => List (ftp.request.command == "LIST")
+Filter Commands:
+1: x1x series: Information request responses
+2: x3x series: Connection messages
+3: x3x series: Authentication messages
+-----x1x series-----
+1: 211=> System Status (ftp.response.code == 211)
+2: 212=> Directory status (ftp.response.code == 212)
+3: 213=> File status (ftp.response.code==213)
+--------------------
+------x2x series-----
+1: 220=> service ready (ftp.response.code ==220)
+2: 227=> entering passive mode (ftp.response.code ==227)
+3: 228=> long passive mode (ftp.response.code ==228)
+4: 229=> Extended passive mode (ftp.response.code ==229)
+----------------
+----------x3x series---------
+1:230=> user login (ftp.response.code ==230)
+2:231=>user logout(ftp.response.code ==231)
+3:331=>Valid username (ftp.response.code ==331)
+4:430=>Invalid username or password (ftp.response.code ==430)
+5:530=>No login, invalid password (ftp.response.code ==530)
+----------------------------
+-----------FTP-Practice questions-----
+Bruteforce signal (List target username) => ftp.response.code ==530 && ftp.response.arg contains 'username'
+Password Spray signal (list target for a static password) => ftp.request.command == 'PASS' && ftp.request.arg == 'password'
