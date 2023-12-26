@@ -1,4 +1,7 @@
-@please learn the fundamentals first before going deep down in.
-
-I will share few articles with you which provide you the important information about cybersecurity fundamentals.
-I also walked on same path that I am directing you so please if you really eager to learn follow it.
+--------------------------MAC addresses-----------------------------
+Media Access Control Address are essential for communication within a local network. while IP addresses handle routing and addressing at the network layer (Layer 3), MAC addresses operate at the data link layer (layer 2) ad are crucial for delivering data packets within the same local network. When a device wants to send data to another device on the same subnet, it needs the MAC address to create a frame that can be delivered across the local network segment. Address resolution protocol (ARP) is the protcol responsible for translating IP addresses into MAC addresses. When a device does not have the MAC address in its cache, it sends an ARP request which broadcast message sent to all devices within the same local network segment. The device that holds the requested IP address respond to the ARP request directly to the sender, providing the MAC address. 
+--------------------------------------------------------------------------
+-----------Tradition-Security/Modern-Security----------------------
+Traditional security is refers to conventional methods and practices used to protect networks and systems such as firewalls, antivirus software, and intrusion detection systems. It was relised on known patterns and signatures of attackes to detect and prevent from them (threats). 
+On the other hand, encompasses a more holistic and dynamic approach that used zero-trust model assumes no implicit trust within or outside the network and focus on continuous verification of entities. Moreover, utilizing machine learning and behavioral analysis to detect anomalies and unknow threats rather than solely relying on signatures.
+Key-points
