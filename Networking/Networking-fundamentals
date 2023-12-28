@@ -1,0 +1,13 @@
+-----------------Components of Reliable Networks (Fault tolerance, Quality of Service, Scalability, and Security)---------------
+1: Fault tolerance=> Network should depend on multiple network data. If one path fail, the message (data packet) are instantly sent over a different link.
+2: Scalability=> A scalability network expands quickly to support new users and applications. It does without disgrading the performance of service.
+3: Quality of Service=> When the volume of traffic is grater than what can be transported across the network, device will hold the packets in memory until resources become available to transmit them.
+Quality of service managed by the router ensures that priorities are mentioned with the type of communication and tis importance to the organisation.
+4: Security=> Consist of three components ( Confidentiality, Integrity, and Availability)
+------------------------------------------------------------------------------------------------------------------------------------
+Physical address => MAC address
+Logical address => IP4/IP6 address
+----------------------------Hierarchical Network Design------------------------------------------------
+1: Core Layer=> Bacbone layer with backup connections. Core layer devices typically include very powerfull, high speed switches and router.
+2: Distribution Layer=> Provides a connections point for separate networks and flow of information between the networks.
+3: Access Layer=> The access layer provides a connection point to end users devices to the network.
