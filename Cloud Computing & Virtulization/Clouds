@@ -1,0 +1,22 @@
+Cloud Types:
+1: Public 
+2: Private
+3: Hybrid 
+4: Community
+
+-------------Cloud Services-------------
+1: SaaS
+2: PaaS
+3: IaaS 
+
+--------------Cloud Computing and Virtualization-------
+Virtualizing technology that enabled a host OS to support one or more client OSs. Virtualization means creating a virtual rather than physical version of something such as computer. An example would be running a Linux computer on your windows PC. 
+-----Advantage of Virtualization---
+1: Reduce cost through requiring less space, energy, and equipments.
+----------------Hypervisors----------------
+The hypervisor is a program, hardware, or firmware that adds a abstraction layer on top of the physical hardware. The abstraction layer is used to create virtual machines which have access to all the hardware of the physical machine such as CPU, memory, disk controllers, and NICs. 
+------------Types of Hypervisor----
+1: Bare Metal
+2: Hosted 
+=>Bare Metal hypervisor is installed directly on the hardware. For example on brand new PC runs multiple OS (linux, windows) without installing any hosted OS. This type of hypervisor are usually used on enterprise servers and data center networking devices. 
+=> Hosted approach which hypervisor is installed on top of the existing OS, such as MacOS, Windows, or Linux. 
