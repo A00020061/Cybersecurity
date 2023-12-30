@@ -1,0 +1,23 @@
+---------------------Cybersecurity Frameworks--------------------------
+In cybersecurity, a frame work refers to a structured set of guidelines, best practices, and processes designed to help organisations manage and improve their security posture. Framework is a roadmap for assessing risk, establishing a robust cybersecurity strategy.
+
+----------Why we need it=> (Risk Management, Compliance, Standardization):
+1: Risk Management=> They assisting in identifying, assessing, and mitigating risks by providing methodologies for risk analysis.
+2: Compliance=> Adhering laws and industry standards, avoiding potential fines and penalities.
+3: Standardization=>Set of practices that organisation can follow.
+----------------------------------------------------------------------------
+----------------Advanced Persistent Threat-----------------
+APT is a long term attacks against organisation or countries which engages threat group (team/group) or even country (nation-state group).
+--------------------------MITRE Corporation---------------
+1: ATT&CK (Adversarial Tactics, Techniques, and Common Knowledge) Framework
+2: CAR (Cyber Analytics Repository) 
+3: ENGAGE
+4: D3FEND (Detection, Denial, and Distruption Framework Empowering Network Defense)
+5: AEP (ATT&CK Emulation Plans)
+
+ATT&CK=>It is a globally-accessible knowledge base of adversary tactics and techniques based on real-world observations.
+CAR=> It is focused on providing a set of validated and well-explained analytics, in particular with regards to their operating theory and rationale.
+ENGAGE=> It is a framework for planning and discussing adversary engagement operations that empowers you to engage your adversaries and achieve your cybersecurity goals.
+D3FEND=> A knowledge graph of cybersecurity countermeasures.
+-------------------------------------------------------------------------------------
+
