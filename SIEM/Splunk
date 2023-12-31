@@ -1,0 +1,26 @@
+----------------Splunk Filter Commands------------
+-index=* or index='main'
+-UserName=Sandy
+-Source_ip="107.14.182.38"
+
+--------------------Splunk-Practice-filter-commands------------------------
+Question was=>what was the URI which got multiple brute force attempts?
+
+index="botsv1" Imreallynotbatman.com sourcetype="stream:http" dest_ip="192.168.250.70" uri="/joomla/administrator/index.php" form_data=*username*passwd*
+| rex field=form_data "username=(?<creds>\w+)"
+| table _time uri src_ip dest_ip creds
+--------------
+Question=>How to count of the IP addresses in the field src_ip.
+
+index=botsv1 imreallynotbatman.com sourcetype=stream* 
+| stats count(src_ip) as Requests by src_ip
+|sort -Requests
+
+----------------
+Question=> What was the correct password used to access CMS.
+
+index=botsv1 sourcetype=stream:http dest_ip="192.168.250.70" http_method=POST form_data=*username*passwd* 
+| rex field=form_data "passwd=(?<creds>\w+)"  
+| table src_ip http_user_agent creds
+--------------------
+
