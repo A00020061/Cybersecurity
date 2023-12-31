@@ -9,7 +9,9 @@ Symmetric (AES{Advanced Encryption Standard}, DES{Data Encryption Standard})
 Asymmetric (RSA and ECC)
 Purpose:
 Confidentiality and Security of data
+
 ---------------------------
+
 Practice-Lab-Cisco-Packet-Tracer
 ![Packet_Tracer_Image](https://github.com/A00020061/Cybersecurity-Projects/assets/82016672/54f6c0ee-2e39-421f-aa65-e1b10b0e14c4)
 Reverse-Engineering with Any.run
