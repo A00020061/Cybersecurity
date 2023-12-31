@@ -1,0 +1,7 @@
+SIEM stand for Security Information and Event Management system. It is a tool that collects data from various endpoints/network devices across the network,stores them at a centralized place, and performs correlations on them.
+-----------------------Log sources that capture events--------------
+1: Host-Centric Log Sources
+2: Network-Centric Log Sources
+Host-Sources: - Accessing files, powershell execution, user attempting to authenticating
+Network-Sources: Network related logs are generated when the hosts communicate with each other or access the internet to visit a website.
+like ssh connection, file being accessed via FTP, Web Traffic, user accessing company resources through VPN. 
