@@ -1,15 +1,17 @@
 ---------------Microservices and APIs------------
-Imagine you're building an e-commerce website. In monolithic approach (traditional way), all functionalities (User Interface, product catalog, payment processing, and order management) are integrated into one massive application. If you want to update the payment system, you might need to redeploy the entire website, testing, which can be complex and risky. Your website may be down when performaing any changes on website's functionalities or dependencies.
-
-Now, with Microservices, each functionality becomes a separate service. The user interface, product catalog, payment processing, and order management are distinct services communicating through APIs. If there's a need to update the payment processing system, you can focus solely on that service without affecting other parts of the website. It allows for easier scaling, faster development, and more flexibility to adapt and improve individual components without impacting the entire site's functionality. in a nutshell, Each service can be developed, maintained, and scaled independently, making the overall system more robust and flexible.
-
+Imagine you're building an e-commerce website. In monolithic approach (traditional way), all functionalities (User Interface, product catalog, payment processing, and order management) are integrated into one massive application. 
+If you want to update the payment system, you might need to redeploy the entire website, testing, which can be complex and risky. Your website may be down when performaing any changes on website's functionalities or dependencies.
+Now, with Microservices, each functionality becomes a separate service. The user interface, product catalog, payment processing, and order management are distinct services communicating through APIs. If there's a need to update 
+the payment processing system, you can focus solely on that service without affecting other parts of the website. It allows for easier scaling, faster development, and more flexibility to adapt and improve individual components without 
+impacting the entire site's functionality. in a nutshell, Each service can be developed, maintained, and scaled independently, making the overall system more robust and flexible.
 Example: Netflix application architecture is based on microservice to better handle their rapidly growing scale and the complexity of their services.
 
 Advantages of microservices=> Scalable (based on demand), fault isolation, faster development, and continuous delivery
 
 Components of Microservices=> Containers, Clustering, Infrastructure as Code (IaC), APIs, and Service delivery
 
-=> Service discovery: Service discovery is a vital aspect of microservices that enables dynamic and automatic detection of services within the system. It allows each service to register itself with a central registry or service mesh and obtain information about other services' locations and endpoints using tools like Netflix Eureka, Consule, etc.
+=> Service discovery: Service discovery is a vital aspect of microservices that enables dynamic and automatic detection of services within the system. It allows each service to register itself with a central registry or service mesh 
+and obtain information about other services' locations and endpoints using tools like Netflix Eureka, Consule, etc.
 
 --------------------MCQ on Microservice Architecture-------------
 
