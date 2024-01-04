@@ -3,3 +3,8 @@ Host-Device command => nc -lnvp <port-no.> > <give-file-name-to-save> (nc -lnvp 
 Target-Device command => nc  <target-device-IP> <port-no.> < <transfer-file-name> (nc 10.10.12.13 4545 < domain.pcap)
 
 Please note: Port number should be similar on both commands. 
+
+----------via scp <file-name> <username>@<ip address>:<directy location to save>---------
+=>scp test.txt kali@10.0.0.0:home/kali/downloads
+
+Above command will transfer the file to that ip address linked device.
