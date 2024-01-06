@@ -4,6 +4,14 @@ designed for a particular applications or functions and are integrated into othe
 
 Example: A washing Machine |Digital watches | Traffic Light Controllers | Microwave | Airbag in automobile etc.
 
+=>What is Real-time Operating System (RTOS)?
+
+RTOS is a specialized operating systems designed to manage hardware resources and run software applications in predictable and time-constrained environment. Unlike general-purpose operating sytems (like Windows or Linux) which are 
+designed for multitaksing and user convenience, RTOSs are engineered for applications that require a high degree of reliability and precision in timing.
+
+Example: Airbag system of a car, the airbag must deploy within a specified timer after a collision is detected. Moreover, Spaceship, Missiles, and Robots etc.
+
+
 => Why we need Embedded Systems:
 1: Efficiency and Specialization (Because they are tailored for specific tasks)
 2: Size and cost (Usually smaller and less expensive than full-fledged computers)
