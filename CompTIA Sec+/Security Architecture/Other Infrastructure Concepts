@@ -1,0 +1,74 @@
+=> Embedded Systems:
+Embedded systems are specialized computer systems that are designed to perform specific functions or tasks, often as part of a larger system. Unlike general-purpose computers liek laptops or desktops, embedded systems are typically
+designed for a particular applications or functions and are integrated into other devices.
+
+Example: A washing Machine |Digital watches | Traffic Light Controllers | Microwave | Airbag in automobile etc.
+
+=> Why we need Embedded Systems:
+1: Efficiency and Specialization (Because they are tailored for specific tasks)
+2: Size and cost (Usually smaller and less expensive than full-fledged computers)
+3: Reliability and Stability
+4: Real-time Operations (Many embedded systems operate in real-time, meaning they can process data and respond to inputs immediately like airbag systems in cars)
+5: Energy Efficiency (Typically consume less power)
+
+--------------CompTIA Security+ Questions list--------------
+1: Which security measure is crucial for securing IoT devices that heavily rely on embedded systems?"
+A) Firmware updates
+B) Network segmentation
+C) Intrusion Detection Systems (IDS)
+D) Physical access control
+
+Correct Answer: A) Firmware updates
+Explanation: Regular firmware updates are crucial for IoT devices to patch vulnerabilities and enhance security features.
+
+2: What is a key consideration for secure coding in embedded systems?"
+A) Code obfuscation
+B) Minimizing resource usage
+C) Maximizing hardware performance
+D) Incorporating backdoors for debugging
+
+Correct Answer: B) Minimizing resource usage
+Explanation: Embedded systems often have limited resources (like memory and processing power), so it's important to write efficient code that minimizes resource usage.
+
+3: Which security feature helps in verifying the integrity of embedded system firmware during boot-up?"
+A) Secure Enclave
+B) TPM (Trusted Platform Module)
+C) BIOS passwords
+D) Remote attestation
+
+Correct Answer: B) TPM (Trusted Platform Module)
+Explanation: A TPM can be used to ensure the integrity of firmware by providing secure storage for cryptographic keys and performing hardware-based verification during the boot process.
+
+4: Which protocol is commonly used for securing communications in IoT devices with embedded systems?"
+A) MQTT (Message Queuing Telemetry Transport)
+B) SNMP (Simple Network Management Protocol)
+C) SMTP (Simple Mail Transfer Protocol)
+D) HTTP (Hypertext Transfer Protocol)
+
+Correct Answer: A) MQTT (Message Queuing Telemetry Transport)
+Explanation: MQTT is a lightweight messaging protocol often used in IoT devices for secure and efficient communication.
+
+5: Which attack targets vulnerabilities in embedded systems by overloading input buffers?"
+A) SQL Injection
+B) Buffer Overflow
+C) Man-in-the-Middle (MitM)
+D) Cross-Site Scripting (XSS)
+
+Correct Answer: B) Buffer Overflow
+Explanation: A buffer overflow attack occurs when more data is input into a buffer than it can handle, potentially allowing an attacker to exploit vulnerabilities in the system's memory.
+
+6: The secure boot process in an embedded system is designed to prevent which of the following?
+A) Data corruption due to power failures
+B) Unauthorized modification of the boot sequence
+C) Overheating of the CPU
+D) Slowdown due to fragmented memory
+
+Correct Answer: B
+
+7: Which is a common method to secure data transmission in networked embedded systems?
+A) Data compression
+B) Using SSL/TLS protocols
+C) Increasing bandwidth
+D) Physical isolation of networks
+
+Correct Answer: B
