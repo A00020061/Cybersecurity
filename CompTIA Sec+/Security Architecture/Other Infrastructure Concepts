@@ -11,6 +11,14 @@ designed for multitaksing and user convenience, RTOSs are engineered for applica
 
 Example: Airbag system of a car, the airbag must deploy within a specified timer after a collision is detected. Moreover, Spaceship, Missiles, and Robots etc.
 
+=What is SCADA System?
+SCADA stands for Supervisory Control and Data Acqisition,used for controlling and monitoring industrial processes. SCADA systems are crucial for industrial organizations as they help to maintain efficiency, process data for smarter
+decisions, and communicate system issues to help mititage downtime. 
+
+SCADA's components => sensors (for controlling and monitoring field devices), RTU (Remote Terminal Unit is used to grab and send data from sensors to SCADA server via network), SCADA server, SCADA dashboard.
+Example: Power Plant, Gas Refining, Transpotation, Telecommunication, and Water Plant.
+
+Why we need SCADA System: Early detection of problems, analysis for better decision-making, and enhanced process automation. 
 
 => Why we need Embedded Systems:
 1: Efficiency and Specialization (Because they are tailored for specific tasks)
@@ -80,3 +88,33 @@ C) Increasing bandwidth
 D) Physical isolation of networks
 
 Correct Answer: B
+
+8: Which of the following is a common security threat specifically concerning SCADA systems?
+A) Phishing emails
+B) SQL injection attacks
+C) Unauthorized remote access
+D) Adware
+
+Correct Answer: C) Unauthorized remote access
+Explanation: Unauthorized remote access is a significant threat to SCADA systems because they often control critical infrastructure and industrial processes. Gaining unauthorized access can lead to manipulation of control systems, 
+potentially causing widespread disruptions.
+
+9: What is a critical security measure for protecting SCADA networks?
+A) Regular password changes
+B) Using a firewall
+C) Frequent software updates
+D) All of the above
+
+Correct Answer: D) All of the above
+Explanation: Securing SCADA networks involves multiple layers of security. Regular password changes prevent unauthorized access, firewalls protect against external threats, and frequent software updates address vulnerabilities.
+
+10:  Which factor is crucial when considering the security of SCADA communication protocols?
+A) Speed of data transmission
+B) Encryption of data
+C) Protocol popularity
+D) Ease of implementation
+
+Correct Answer: B) Encryption of data
+Explanation: The security of communication protocols in SCADA systems is vital, and encryption is key to protecting data integrity and confidentiality during transmission. It helps prevent interception and manipulation of critical 
+operational data.
+
