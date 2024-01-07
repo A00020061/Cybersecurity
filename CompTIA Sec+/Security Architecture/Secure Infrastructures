@@ -1,0 +1,41 @@
+=> What is Security Zone and how different from Demilitarized Zone (DMZ)?
+A 'security zone' in the context of network and information security is a segment of a network that is defined and enforeced by security policies, tools, and procedures. It is a way to control access and monitor activities within
+a specific area of a organization's network. Security zones are crucial for managing and mitigating risks associated with networked systems and data.
+
+Why we need Security Zones: 
+1: Risk Management, Data Protection, Threat Isolation, monitoring and detection, and access control.
+
+
+Demilitarized Zone is a middle ground between the internet (external network) and the internal network of a company or organization. It's designed to host services that need to be accessed by the outside world, like web servers, email servers,
+sometimes VPN gateways. This zone adds an extra layer of security by keeeping these external-facing services separate from the more sensitive internal network.
+
+
+Which of the following best defines a security zone in a network context?
+A) A physical barrier securing server rooms
+@B) A segment of a network with specific security measures and policies
+C) A type of firewall used for external network protection
+D) A protocol for securing wireless networks
+
+What is the primary purpose of a Demilitarized Zone (DMZ) in a network architecture?
+A) To provide a highly secure area for sensitive data
+@B) To isolate internal network resources from external threats
+C) To enable unrestricted access to all network services
+D) To host internal databases and applications
+
+Which of the following is a key advantage of implementing security zones in a network?
+A) Simplified network architecture
+B) Increased vulnerability to external threats
+@C) Enhanced risk management and containment
+D) Reduced need for encryption protocols
+
+What distinguishes a Security Zone from a Demilitarized Zone (DMZ) in a network setup?
+A) The use of Intrusion Detection Systems (IDS)
+B) The presence of firewalls
+C) The specific focus on external threats
+@D) The broader application beyond internal-external separation
+
+In a corporate network, which zone typically hosts services like web servers and email servers accessible from the internet?
+A) Internal Zone
+B) Secure Zone
+C) Restricted Zone
+@D) Demilitarized Zone (DMZ)
