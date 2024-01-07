@@ -21,4 +21,6 @@ Wireshark-Packets filters
 Port-Forwarding Diagram
 ![Port-Forward](https://github.com/A00020061/Cybersecurity-Projects/assets/82016672/0e53ebc3-18f0-4cb2-b465-3b967bdca144)
 
+Demilitarized Zone (DMZ)
+![sdn-dmz_network_architecture](https://github.com/A00020061/Cybersecurity-Projects/assets/82016672/6d3d3212-856a-4452-abb6-9c490c0ae48c)
 
