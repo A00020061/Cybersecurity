@@ -1,0 +1,41 @@
+---------TCP Scan (-sT)-------
+Example: nmap -sT -p 80,443 <machine-IP>
+
+-------SYN Scan (-sS)--------
+Example: nmap -sS -p 80, 443 <machine_ip>
+
+------UDP Scan (-sU)--------
+Example: nmap -sU -p 80,443 <Machine_IP>
+
+--------Verbosity(-v,-vv,-vvv)----------
+Verbose provides a further increase the level of information.
+Example: nmap -v/-vv/-vvv -p 80, 443 <Machine_IP>
+
+----Aggressive Scans (-A) ------------
+When you would like to get details information about the target host.
+Example: nmap -vv -A -p 80,443 <Machine-IP>
+
+------------(-Pn)------------
+-Pn=> is used to skip host discovery and testing whether the host is live. 
+Example: nmap -sS -Pn <target-IP>
+-F=> to speed up the scan, we limited ourselves to the 100 most common ports using the -F option.
+Example: nmap -sS -Pn -F <target-IP>
+
+-------------Decoy(-D) hide your scans--------
+Using decoys makes your IP address mix with other 'Decoy' IP address. It will be difficult for the firewall and target host to know where the port scan is coming from.
+Example: nmap -sS -Pn -D 10.10.10.1, 10.10.10.1, ME -F <Machine-IP>
+
+-------Proxy (--proxies)-------------------
+nmap -sS -Pn --proxies <Proxy-URL> -F <Machine_IP>
+Example: nmap -sS -Pn --proxies 10.10.13.37 <Machine_IP>
+
+-------------Fixed Source Port Number (-g or --source-port) ----------
+nmap -sS -Pn -g 8080 -F <Machine-IP> 
+Example: nmap -sS -Pn -g 8080 -F 10.10.10.1
+
+---------Save Output in file (-oN) ---------
+nmap -vv -Pn -oN file.txt 10.10.10.1
+
+
+---------Combination of all arguments ---------
+Example: nmap -vv -sU -sT -Pn -oN -sS -A -D --proxies <Proxy-URL> -F <Machine-IP>
