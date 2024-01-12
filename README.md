@@ -24,3 +24,7 @@ Port-Forwarding Diagram
 Demilitarized Zone (DMZ)
 ![sdn-dmz_network_architecture](https://github.com/A00020061/Cybersecurity-Projects/assets/82016672/6d3d3212-856a-4452-abb6-9c490c0ae48c)
 
+EAP (Extensible Authentication Protocol)
+![security-the_8021x_authentication_process-f](https://github.com/A00020061/Cybersecurity-Projects/assets/82016672/216ab840-a3cf-495e-b825-17162b63dccc)
+
+
