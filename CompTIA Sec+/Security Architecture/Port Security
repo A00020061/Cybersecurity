@@ -1,9 +1,11 @@
-=> What is Extensible Authenticaion Protocol?
+=> What is Extensible Authentication Protocol?
 EAP provides a secure and extensible frame work for authenticating users and devices on networks, allowing diverse
-and flexible authentication methods while maintaining strong security.
+and flexible authentication methods while maintaining strong security. It plays a significant role in network security
+particularly in controlling access to networks and ensuring that only authenticated users and devices can connect.
 
 => How does EAP work?
 EAP uses the 802.1x standard as its authentication mechanism over a local area network or a wireless LAN. 
+
 Key feature: 
 =>Three-party model:
 Supplicant: Endpoint like laptop, desktop
@@ -16,6 +18,11 @@ EAP-FAST (Flexible Authentication via Secure Tunneling)
 EAP-TTLS (Tunneled TLS): Certificate based mutual authentication.
 LEAP (lightweight EAP)
 
+Difference between PEAP and EAP-TLS:
+PEAP creates a secure TLS tunnel before any sensitive authentication data is exchanged. Only requires a certificate
+on the server side, simplifying client-side setup.
+EAP-TLS does not use a pre-established tunnel and authentication data is exchanged directly. Requires certificates
+on both the client and server, ensuring strong mutual authentication. 
 
 Question 1
 
@@ -26,10 +33,7 @@ b) Network layer
 c) Transport layer
 d) Application layer
 
-(Answer) d) Application layer
-
-EAP operates at the application layer (OSI layer 7) because it deals with user authentication and data security,
-which are application-level concerns.
+(Answer) d) Data link layer
 
 Question 2
 
@@ -92,11 +96,13 @@ d) EAP-TTLS (EAP Tunneled TLS)
 
 LEAP is the method that relies on one-time passwords for secure authentications.
 
-True or False: EAP-MD5 (EAP with Message Digest 5) is considered a secure option for network authentication due to its strong hashing algorithm.
+True or False: EAP-MD5 (EAP with Message Digest 5) is considered a secure option for network authentication due to
+its strong hashing algorithm.
 a) True
 =>b) False
 
-A company prioritizes confidentiality and integrity of user credentials during the authentication process. Which EAP method would be most suitable for achieving these goals?
+A company prioritizes confidentiality and integrity of user credentials during the authentication process. Which EAP
+method would be most suitable for achieving these goals?
 =>a) EAP-FAST (EAP-Flexible Authentication via Secure Tunneling)
 b) EAP-SIM (EAP with Subscriber Identity Module)
 c) EAP-AKA (EAP with Authentication and Key Agreement)
@@ -117,3 +123,9 @@ a) Man-in-the-middle attacks if network infrastructure is not properly secured
 =>b) Increased computational overhead compared to simpler EAP methods
 c) Vulnerability to dictionary attacks for weak passwords used with PEAP inner authentication
 d) Potential for unauthorized third-party access if server certificates are compromised
+
+PEAP (Protected Extensible Authentication Protocol) is different from EAP-TLS because:
+A) PEAP does not use any form of encryption.
+B) PEAP requires certificates on both client and server.
+=>C) PEAP creates an encrypted TLS tunnel before the authentication process.
+D) PEAP is only used in wired networks.
