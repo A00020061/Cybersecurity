@@ -1,0 +1,23 @@
+-------------------------Crack the Hash---------------
+Online Tools: Hashes.com | Hash Cracker | Hash Analyzer | Hash Identifier
+
+Example: 741ebf5166b9ece4cca88a3868c44871e8370707cf19af3ceaa4a6fba006f224ae03f39153492853
+
+Step 1: find the hash type (MD5, SHA-128, SHA-256, and more)
+Step 2: Choose between hashcat or john offline tool to crack the hash
+
+=> for hashcat
+Require to know 'Mode' like MD5=0 (use https://hashcat.net/wiki/doku.php?id=example_hashes)
+
+Command=> hashcat -m 0 hash.txt /usr/share/wordlists/rockyou.txt 
+
+Breakdown: -m => mode (md5 = 0 | SHA1 = 100)
+hash.txt => A file contains the hash value to be cracked
+
+=> for John
+
+Require the hash name like MD5 | SHA1 
+
+Command=> john --format=md5 --wordlist=/usr/share/wordlists/rockyou.txt hash.txt --show
+
+
