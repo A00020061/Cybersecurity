@@ -1,0 +1,104 @@
+The 'States of data' refers to a conceptual framework for understanding how data exists and moves throughout its lifecycle. This framework is particularly relevant in the context of data security, as different states present unique
+vulnerabilities and require different protection measures.
+
+There are three main states of data:
+1: Data at rest=> This refers to data that is stored and not actively being processed or transferred. Example include files on hard drives, backups, and data stored in database.
+2: Data in transit=> This refers to data that is actively being moved between systems, such as over a network or on removable media. Examples include data sent via email, trasferred between servers, or downloaded from the internet.
+3: Data in use=> This refers to data that is currently being accessed and processed by applications. Examples include data loaded into RAM ofr active processing, data displayed on a screen, or data being manipulated by and applications.
+----------------------------------------
+1. Which state is data in when it is actively being transferred between systems?
+
+(a) At rest
+(b) In transit
+(c) In process
+(d) Destroyed
+
+(b) In transit: Data is considered "in transit" when it is actively being moved between systems, such as over a network or on removable media.
+
+2. What kind of security controls are most relevant to protecting data at rest?
+
+(a) Data loss prevention (DLP)
+(b) Intrusion detection and prevention systems (IDS/IPS)
+(c) Network segmentation
+(d) Multi-factor authentication (MFA)
+
+(a) Data loss prevention (DLP): DLP tools monitor and control the movement of sensitive data, preventing unauthorized transfer or leakage. Encryption in transit plays a role, but at-rest controls focus on access and storage.
+
+3. True or False? Data in process is often the most vulnerable to unauthorized modification.
+
+(a) True
+(b) False
+
+(a) True: Data in process, being actively used by applications, is often less protected than data at rest or in transit. It may reside in memory or temporary files, accessible to malware or privileged users.
+
+4. Which cryptographic technique is most commonly used to secure data in transit?
+
+(a) Hashing
+(b) Symmetric encryption
+(c) Asymmetric encryption
+(d) None of the above
+
+(b) Symmetric encryption: For efficient encryption/decryption in transit, both users share the same secret key. Asymmetric encryption is more suitable for authentication and key exchange. Hashing verifies data integrity but doesn't 
+provide confidentiality.
+
+5. What specific risk does data remanence pose?
+
+(a) Information disclosure after deletion
+(b) Denial-of-service attacks
+(c) Data manipulation in transit
+(d) Malware infection
+
+(a) Information disclosure after deletion: Even after deleting data, traces might remain on storage media that attackers can recover (data remanence). Other options are not directly related to remanence.
+
+6. Which data lifecycle event should trigger the activation of data retention policies?
+
+(a) Creation
+(b) Modification
+(c) Access
+(d) Disposal
+
+(a) Creation: Data retention policies determine how long different types of data must be kept after creation. Access or modification might trigger updates but initial creation sets the start point.
+
+7. What is the primary purpose of data wiping procedures?
+
+(a) To encrypt data at rest
+(b) To prevent data recovery from storage media
+(c) To authenticate authorized users
+(d) To monitor network traffic for anomalies
+
+(b) To prevent data recovery from storage media: Wiping overwrites data with random patterns, making it difficult or impossible to recover even with specialized tools. Encryption is for protecting data in use or transfer, not 
+permanently deleted data.
+
+8. Which of the following is NOT a best practice for securing data at rest?
+
+(a) Regularly backing up data
+(b) Encrypting sensitive data
+(c) Storing data on removable media
+(d) Implementing access controls
+
+(c) Storing data on removable media: Removable media like USB drives are easily lost or stolen, increasing the risk of data breaches. Backups, encryption, and access controls enhance data security at rest.
+
+9. What term refers to the legal and regulatory requirements for protecting personal data?
+
+(a) Data governance
+(b) Data classification
+(c) Data privacy
+(d) Data integrity
+
+(c) Data privacy: Data privacy laws define rights and obligations for collecting, using, and protecting personal data. Data governance and classification support data privacy through policies and procedures.
+
+10. Which security standard establishes specific controls for protecting classified information?
+
+(a) ISO 27001
+(b) NIST SP 800-53
+(c) PCI DSS
+(d) HIPAA
+
+(b) NIST SP 800-53: This U.S. government standard provides specific controls for protecting classified information in information systems and environments. ISO 27001 focuses on general information security management, PCI DSS for 
+payment card information, and HIPAA for healthcare data.
+
+11. Data in transit is at risk of being intercepted. Which of the following is the best method to protect it?
+A) Disk Encryption
+=>B) Transport Layer Security (TLS)
+C) Strong User Authentication
+D) File Permissions
