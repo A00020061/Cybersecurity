@@ -1,0 +1,83 @@
+Honeypots, honeynets, honeyfiles, and honeytokens are all cybersecurity concepts used to detect and analyze malicious activity. 
+Here's a brief explanation of each with simple industry-level examples:
+
+Honeypot:
+
+Definition: A honeypot is a decoy system or network designed to attract and detect unauthorized access or attacks. 
+It mimics a real system or network to lure attackers, allowing security professionals to observe and study their 
+tactics.
+
+Example: An organization might deploy a honeypot server that appears to contain sensitive data. Any attempt to access or compromise this server would likely indicate malicious intent.
+
+Honeynet:
+
+Definition: A honeynet is a network of interconnected honeypots designed to simulate a larger network environment. 
+It helps security professionals observe and analyze attacks on a broader scale.
+
+Example: An organization might set up a honeynet consisting of multiple honeypots mimicking different systems, 
+such as web servers, databases, and email servers. This can provide a more comprehensive view of potential threats.
+
+Honeyfile:
+
+Definition: A honeyfile is a decoy file created to detect unauthorized access or data breaches. It's essentially a 
+file that looks valuable to an attacker but is monitored for any attempt to access or modify it.
+
+Example: A company might create a fake spreadsheet labeled "Employee Salaries" and place it in a directory with 
+sensitive data. If someone tries to open or copy this file, it triggers an alert, indicating potential unauthorized 
+access.
+
+Honeytoken:
+
+Definition: A honeytoken is a bait token, such as a username or document, intentionally placed to detect 
+unauthorized use. It helps identify specific actions or activities associated with malicious behavior.
+
+Example: An organization might create a user account with a username like "Admin_Backdoor" that should never be 
+used legitimately. If any attempts are made to log in using this account, it raises suspicion and triggers an alert.
+
+These concepts are part of deception-based cybersecurity strategies, providing valuable insights into potential 
+threats and helping organizations proactively defend their systems and networks. They are particularly useful for 
+understanding attack techniques, identifying vulnerabilities, and improving overall cybersecurity defenses.
+
+1: A honeyfile can be used for:
+a:Attracting cyber attackers
+b:Triggering alerts when accessed
+c:Monitoring network activity
+d:All of the above ( Missed) <===
+
+2: What is a honeytoken?
+a: A decoy file that is designed to attract attackers
+b: A unique identifier assigned to a honeyfile
+c: A decoy system that is designed to lure potential attackers
+d: A unique identifier that is designed to track attackers <===
+
+3: Which of the following should not be used as honeytokens? (Select all that apply)
+a: Active user account credentials <====
+b: Database entries mimicking real data
+c: Actual URLs to live websites or resources <====
+d: Dummy server logs with enticing information 
+e: Fake identifiers, including usernames, passwords, email addresses, and IP addresses
+
+4: A honeyfile can be any type of file (e.g., a document, email message, image, or video file) containing real 
+user data intentionally placed within a network or system to attract potential attackers or unauthorized users.
+a: True 
+b: False <=== 
+
+5: Which of the following statements about honeypots are true? (Select 2 answers)
+a: Honeypots are always part of a honeynet
+b: Honeypots mimic real systems to attract cyber attackers ( Your answer)
+c: Honeypots are a type of anti-malware solution
+d: Honeypots contain apparent vulnerabilities that are closely monitored by a security team ( Your answer)
+e: Honeypots are used to launch attacks on cyber attackers
+
+6: What is a honeynet in the context of cybersecurity?
+a: A network of IDSs
+b: A network of honeypots <===
+c: A network of infected hosts 
+d: A network of IPSs
+
+7: Which of the answers listed below refers to a honeynet example?
+a: A network of fake websites
+b: A network of fake servers
+c: A network of fake databases
+d: A network of fake file shares
+e: All of the above <===
