@@ -27,4 +27,10 @@ Demilitarized Zone (DMZ)
 EAP (Extensible Authentication Protocol)
 ![security-the_8021x_authentication_process-f](https://github.com/A00020061/Cybersecurity-Projects/assets/82016672/216ab840-a3cf-495e-b825-17162b63dccc)
 
+Infrastructure as Code:
+Infrastructure as Code (IaC) is a practice where you manage and provision IT infrastructure (virtual machines, networks, load balancers, etc.) using code rather than manual processes. It treats infrastructure as you would treat software: you write code to define what you want, and the code is then executed to create or modify the infrastructure.
+
+![Infrastructure-as-code-diagram](https://github.com/A00020061/Cybersecurity-Projects/assets/82016672/eb904b31-2a92-4f7b-b228-4cc211368d6d)
+
+
 
