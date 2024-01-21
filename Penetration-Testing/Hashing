@@ -1,6 +1,8 @@
 -------------------------Crack the Hash---------------
 Online Tools: Hashes.com | Hash Cracker | Hash Analyzer | Hash Identifier
 
+=>hash identifier (offline tool) command can be used to find the hash type in linux terminal.
+
 Example: 741ebf5166b9ece4cca88a3868c44871e8370707cf19af3ceaa4a6fba006f224ae03f39153492853
 
 Step 1: find the hash type (MD5, SHA-128, SHA-256, and more)

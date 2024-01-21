@@ -43,3 +43,5 @@ Example: nmap -vv -sU -sT -Pn -oN -sS -A -D --proxies <Proxy-URL> -F <Machine-IP
 -------------Set IP time-to-live------------
 nmap -sS -Pn --ttl <time to live value> -F <machine-IP>
 Example: nmap -sS -Pn --ttl 12 -F 10.10.10.11
+
+Three common Firewall evasion
