@@ -1,4 +1,4 @@
-Server clustering to a group of servers working together as a single system to provide higher availability, reliability, and scalability. More specifically a server cluster is designed for high availability and redundancy, balance load,
+wwServer clustering to a group of servers working together as a single system to provide higher availability, reliability, and scalability. More specifically a server cluster is designed for high availability and redundancy, balance load,
 provide fault tolerance. In essence, server clustering is a strategy used to increase system capacity and reliability, ensuring continuous operations and efficient management of computing resources in various scenarios, from web hosting
 to enterprise-level applications.
 
