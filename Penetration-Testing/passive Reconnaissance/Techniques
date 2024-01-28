@@ -1,0 +1,23 @@
+Passive reconnaissance is the technique gathers information without interacting with target. Some people also refer to this
+as open-source intelligence (OSINT). All of the information comes from third-party sources who have already gathered
+the information about our target.
+
+The information you gather in this stage depends upon the target. If the target is a website, you want to know as much
+about the technologies behind the web site as possible. If the target is a domain, you want to know as much about the domain as possible.
+
+1: Google dorking (allinurl, allintitle, allintext, site, filetype, and more)
+2: Netcraft (Track data about web server and websites)
+3: Shodan 
+4: DNS (dig and dnsenum commands)
+example: 'dig softcodings.com nm mx'
+'dnsenum softcodings.com'
+5: p0f (passive operating system detection)
+example:' p0f -i eth0' wait for target operating system information.  
+6: whois (whois facebook.com)
+
+
+
+Shodan: Shodan is a different type of search engine. Instead of crawling all thw world's web pages and indexing the informatio0n
+on those pages for search, shodan crawls the internet and pulls the banners on web servers, then indexes the information found in those banners. 
+
+
