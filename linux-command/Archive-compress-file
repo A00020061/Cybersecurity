@@ -1,0 +1,35 @@
+Archive files Methods:
+1: tar -cvf archive.tar file1.css file2.html file3.js (tar command will archive the three files mentioned next to it)
+
+Command description:
+-c => create
+-v => verbose
+-f => file
+
+2: tar -xvf archive.tar (This command will extracts the archive.tar file)
+
+Command description:
+-x => extract
+-v => verbose (will list down the files)
+-f => file
+
+3: tar -tvf archive.tar (if you want to check the archived files without extract them)
+
+Command description:
+-t => Content list 
+
+
+-----------------------Compress file-----------------
+Method 1: gzip (extension support .tar.gz | .tgz)
+
+example: gzip archive.* (This command will compress the archive.* file)
+uncompress: gunzip archive.tar.gz (This command will uncompress the archive file)
+
+
+Method 2: bzip2 (extension .tar.bz2)
+
+example: bzip2 hackerarise.* (compres the hackerarise.* file)
+uncompress: bunzip2 hackerarise.* (uncompress file)
+
+
+
