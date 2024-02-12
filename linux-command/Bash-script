@@ -1,0 +1,13 @@
+#! /bin/bash
+
+echo 'what is your IP?'
+read IP
+
+echo 'what is Port number?'
+read port
+
+nmap -sT -p $port $IP > /dev/nul -oG script.sh
+
+cat script.sh | grep open > script1.sh
+
+cat script1.sh
