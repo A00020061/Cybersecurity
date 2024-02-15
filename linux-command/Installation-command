@@ -1,0 +1,6 @@
+If you find broken dependencies, can be fixed by using below command
+
+=> sudo apt-get install -f
+
+-f (for fix-broken, when used with install subcommand, it attempts to fix broken dependencies by installing any missing
+dependencies that are required by installed packages.)
