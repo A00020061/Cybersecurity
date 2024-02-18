@@ -1,0 +1,52 @@
+=> Scheduling an event or job to run on an automatic basis:
+"crontab" or cron table are the most useful tools for scheduling regular tasks. The cron daemon checks the cron table for which commands to run at specified times. We can alter the cron table
+to schedule a task or job to execute regularly on a particoular day or date.
+
+Cron Table File located: /etc/crontab
+
+Crontab file shows below
+
+M   H  DOM  MON  DOW  User Command
+
+30  2  *     *  1-5  root /root/mscanningscript 
+
+Explation: Above scanning script will be run at 2:30am, Monday through Friday by root user. Day of the Month(1-31), Month(1-12), Day of the week(0-7 | 0= Sunday, 1= Monday)
+
+
+=> Scheduling a Backup Task:
+
+00  2  *  *  0  backup /bin/systembackup.sh
+
+Explation: Above backup task will be run every Saturday night/Sunday morning at 2am. 
+
+=> Crontab Shortcuts:
+
+The crontab file has come built-in shortcuts you can use instead of a specifying the time,day, and month every time.
+
+@yearly, @annually, @monthly, @weekly, @daily, @midnight, @noon, @reboot.
+
+Example: MySQL scanner to run every night at midnight
+
+@midnight * * * user /usr/share/mysqlscanner.sh
+
+
+
+
+=> Using 'rc' scripts to run jobs at startup
+
+Whenever you start your linux system, a number of scripts are run to set up the environment for you. These are known as the 'rc' scripts. After the kernel has initialized and loaded all its
+modules, the kernel starts a daemon known as init or init.d. This daemon then begins to run a number of scripts found in "/etc/init.d/rc". 
+
+
+Adding Services to "rc.d"
+
+kali>update-rc.d <name of the service> <remove|default|disable|enable>
+kali>update-rc.d postgresql disable
+
+kali> ps aux | grep postgresql (This ouput tells us that the only process ps found running for PostgreSQL was the very command we ran looking for it 
+
+=> Adding Services to YOur Bootup via a GUI
+
+kali> apt-get install rcconf
+
+kali>rcconf 
