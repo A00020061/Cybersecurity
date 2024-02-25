@@ -1,0 +1,61 @@
+We will focus on the logs files, file timestamps, and bash command history. 
+
+=> Covering your tracks with the meterpreter:
+meterpreter> clearev
+
+Windows Event Utility (wevtutil)
+
+cd:\windows\system32> wevtutil
+
+cd:\windows\system32>wevttuil cl security
+
+=> timestomp 
+
+(In some cases, your post-exploitation activities may include accessing or altering documents, reading emails, and other file access. In all of these cases, you will leave evidence
+behind for a skilld investigator. Every operating system and file system timestamp files. Tese timestamps include the last modify, access, and creations (MAC) dates and times.
+
+Luckily, altering timestamps is not difficult to do. if you plan to access or alter any files, first record the original timestamps. One you have accessed or altered the file, you can then use 
+a tuility withini your meterpreter to return the timestamps to their original status. it's called 'timestomp'.
+
+meterpreter> timestomp help
+
+meterpreter> timestomp malwarevnc -z "06/12/2023 04:25:45"
+
+please note that the date and time must be enclosed in double quotatin marks.
+
+
+=> Covering your tracks on Linux Systems
+
+Kali> systemctl stop rsyslog 
+
+This will stop the rsyslog service and disable logging to the log server.
+
+Kali> systemctl start rsyslog
+
+=> Removing your command history
+
+kali> history -d 5 (If you want to delete 5th command in your history)
+
+Kali> history -c (Remove your all history commands)
+
+If want to turn off commmand history, you will need to change the value of your environment variable $HISTSIZE. You can do this by setting your HISTSIZE variable to zero (no commands stored)
+
+kali> HISTSIZE = 0
+
+Kali> echo $HISTSIZE
+0
+
+=> Deleting files can be recovered and must be overwritten to stop recoverable
+
+Remember deleting files does not mean they are unrecoverable. When files are deleted, they are made available to the file system for being overwritten. Until these fiels are overwritten,
+they are completely recoverable. 
+
+Kali> shred 
+
+shred command overwrites the target files with random data multiple times, making it nearly impossible to recover their contents of the command history.
+
+Kali> shred -h
+
+kali> shred -f .bash_history
+
+As we saw above, the user's command history is viewable using the history command, but the command hhisotry is actually stored in the user's profile file named '.bash_history' 
