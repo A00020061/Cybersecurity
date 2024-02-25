@@ -1,0 +1,5 @@
+kali> arp -a (windows)
+kali> sudo arp-scan --localnet (it provides more detailed information about the local network and connected devices)
+kali> nmap -sn 192.168.0.1/24 (it provides information about hosts that respond to ICMP echo requests.)
+
+-sn => 'no port scan' 
