@@ -1,0 +1,66 @@
+The kernel is at the center of the operating system and controls everything the operating system does, including manageing memory, controlling the CPU, and even controlling what the user
+sees on the screen.
+-------------------------------
+=> Checking The Kernel Version:
+
+kali> uname -a (Method 1)
+
+linux kali 4.16.5-kalil-amd64 #1 SMP....
+
+Kali> cat /proc/version (Method 2)
+
+---------------------------------
+
+=> Kernel Tuning with 'sysctl'
+
+You can tune your kernel, meaning you can change memory allocations, enables networking features, and even harden the kernel against outside attacks.
+
+Kali> sysctl -a | less
+
+dev.cdrom.autoclose=1
+dev.cdrom.autoeject=0
+dev.cdrom.check_media=0
+
+Please Note: all changes you make with sysctl command remain in effect only until you reboot the system. To make any changes permanent, you have to edit the configuration file for sysctl
+directly at /etc/sysctl.conf
+
+kali> sysctl -w net.ipv4.ip_forward=1 
+
+(the line net.ipv4.ip_forward=0 is the kernel parameter that enables the kernel to forward on the packets it receives. In other words, the packets it receives,
+it sends back out. The default setting is 0, which means that packet forwarding is disabled.)
+
+kali>sysctl -p 
+
+(after adding the line, you will need to run the above command)
+
+------------------------------------
+
+=> Managing Kernel Modules
+
+Method 1 : insmod (Old approach)
+Method 2 : modprobe (Modern linux approach)
+
+Kali>lsmod (list all modules)
+
+Kali> rmmod (remove the module)
+
+----------------------------------
+
+=> Finding more information with 'modinfo'
+
+kali> modinfo bluetooth 
+
+As you can see the 'modinfo' command reveals significant information about this kernel modulewhich is necessary to use Bluetooth on your system.
+
+-----------------------------------
+
+=> Adding and Removing modules with 'modprobe'
+
+kali> modprobe -a <module-name> (add)
+
+kali> modprobe -r <module-name> (remove)
+
+Kali> dmesg | grep <module-name> 
+
+To test whether the new module loaded properly, you can run the 'dmesg' command, which prints out the message buffer from the kernel, and then filter for 'video' and look for any alterts that would 
+indicate a proble.
