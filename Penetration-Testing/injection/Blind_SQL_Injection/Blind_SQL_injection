@@ -14,6 +14,8 @@ Oracle database=> ' || (select '' from dual) || '
 
 To avoid the mistake and for 1 entry have to use rownum = 1)
 
+=>Please note rownum is used in Oracle database and LIMIT is used in MySQL database for same purpose........
+
 4)Confirm that the administrator user exists in the users database
 
 ' || (select '' from users where username = 'administrator') || ' (It is hard to determine the username does exist or not)
