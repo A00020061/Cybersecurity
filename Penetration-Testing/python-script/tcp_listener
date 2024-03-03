@@ -1,0 +1,85 @@
+#! /usr/bin/python3
+
+import socket
+
+TCP_IP='127.0.0.1'
+TCP_Port=5695
+Buffer_size=100
+
+#create a socket object
+s=socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+
+#Bind the IP and Port 
+s.bind((TCP_IP,TCP_Port))
+
+s.listen(1)
+
+#accept a connection from client
+
+conn, addr = s.accept()
+
+while True:
+
+#receive data from client
+
+  data=conn.recv(Buffer_size)
+  if not data:
+    break
+
+#send a sample response back to the client
+  print('received data', data)
+
+  conn.send(data)
+
+#close the connection
+
+conn.close()
+
+-------------###############-----------
+
+Shebang Line:
+
+#!/usr/bin/python3: This line is called the shebang line. It tells the system to use the Python 3 interpreter to execute the script.
+
+Importing the socket Module:
+
+import socket: This line brings in the necessary functionalities provided by the socket module, allowing the script to work with network sockets.
+
+Defining the tcp_listener Function:
+
+tcp_listener(host, port): This function sets up a TCP listener.
+
+host and port are parameters that define the IP address (in this case, 127.0.0.1, which is localhost) and the port number (in this case, 6996) the listener will bind to.
+Creating a Socket:
+
+listener = socket.socket(socket.AF_INET, socket.SOCK_STREAM): This line creates a socket object for communication. The AF_INET specifies the address family (IPv4), and SOCK_STREAM specifies the socket type (TCP).
+
+Binding the Socket:
+
+listener.bind((host, port)): This binds the socket to a specific address and port so that it can listen for incoming connections.
+
+Listening for Connections:
+
+listener.listen(1): This sets the socket to listen for incoming connections with a maximum queue length of 1 (meaning it will accept one connection at a time).
+
+Accepting a Connection:
+
+client_socket, client_address = listener.accept(): This line waits until a client connects, and when a connection is made, it accepts the connection and gets a new socket (client_socket) to communicate with the client.
+
+Receiving Data:
+
+data = client_socket.recv(1024): This line receives data from the client (up to 1024 bytes) and stores it in the data variable.
+
+Sending a Response:
+
+response = "Hello, client! This is the server.": This creates a sample response.
+
+client_socket.send(response.encode('utf-8')): This sends the response back to the client after encoding it.
+Error Handling and Cleanup:
+
+There is a try, except, and finally block to handle errors and ensure that the socket is closed properly, whether an error occurs or not.
+Setting Host and Port, and Running the Listener:
+
+host = "127.0.0.1" and port = 6996: These lines set the host and port values.
+tcp_listener(host, port): This line calls the tcp_listener function to start the TCP listener.
+This script essentially sets up a simple server that listens for connections on 127.0.0.1:6996, receives data from a connecting client, and sends a response back to the client.
