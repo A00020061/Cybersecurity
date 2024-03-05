@@ -1,3 +1,13 @@
+=>How to detect SQL injection vulnerabilities------------
+You can detect SQL injection manually using a systematic set of tests against every entry point in the application. To do this, you would typically submit:
+
+The single quote character ' and look for errors or other anomalies.
+Some SQL-specific syntax that evaluates to the base (original) value of the entry point, and to a different value, and look for systematic differences in the application responses.
+Boolean conditions such as OR 1=1 and OR 1=2, and look for differences in the application's responses.
+Payloads designed to trigger time delays when executed within a SQL query, and look for differences in the time taken to respond.
+OAST payloads designed to trigger an out-of-band network interaction when executed within a SQL query, and monitor any resulting interactions.
+
+
 => How to combine two table into one horizontally with a single query with a 'JOIN'
 
 --------------------Game Table--------------------
@@ -27,3 +37,9 @@ SELECT player, teamid, stadium, mdate FROM game JOIN goal ON (id = matchid)
 The FROM clause says to merge data from the goal table with that from the game table. The ON says how to figure out which rows in game go with which rows in goal-the matchid from goal must match id
 from game. (If we wanted to be more clear/specific we could say.
 
+Question:1 SQL injection vulnerability allowing login bypass.
+Answer: ' OR 1=1--
+
+Question:2 SQL injection attack, querying the database type and version on Oracle
+Answer: ' UNION SELECT 'abc', NULL FROM dual-- (To check the table column)
+'UNION SELECT banner, NULL FROM v$version-- (Get the database's version)
