@@ -1,0 +1,31 @@
+=> Installation of ClamAV and ClamTK (GUI)
+
+Kali>sudo apt-get install clamav-daemon
+
+=> Now check the version 
+
+Kali>clamscan --version
+
+=>ClamAV and ClamTK use a signature-database to find the virus and important to keep DB up-to-date.
+
+'freshclam' is a component of clamav, handles the automatic updates of the antivirus signature databses.
+
+kali> sudo systemctl stop clam-freshclam
+
+kali> sudo freshclam
+
+kali> sudo systemctl start clam-freshclam
+
+
+=> How to can directory or file?
+
+'clamscan' is used to scan the folder or file.
+
+kali> clamscan --infected --remove --recursive /home/sandeep/Downloads
+
+--injected:- only prints those files which are injected
+--remove:- This command deletes infected files.
+--recursive:- The subdirectories of the directory will also be examined
+
+kali> clamscan -help
+
