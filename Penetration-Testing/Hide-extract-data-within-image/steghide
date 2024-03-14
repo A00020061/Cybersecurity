@@ -1,0 +1,43 @@
+=> 'steghide' is a command-line tool used for hiding and extracting data (usually files) within image and audio files. It employs steganography, which is the practice of concealing a file,
+message, image, or video within another file, message, image, or video. This process allows for hidden communication or secret storage of information. 
+
+The basic usage of 'steghide'
+-----------Embedding Data-----------
+ 
+=>steghide embed -cf cover_file -ef embedded_file -sf output_file [-p password] [-e encryption_algo] [-z compression_level]
+
+-cf cover_file: Specifies the path to the cover image file (the file in which data will be hidden).
+-ef embedded_file: Specifies the path to the file that will be embedded (hidden) within the cover image.
+-sf output_file: Specifies the output file path where the embedded data will be saved.
+-p password: Optional. Specifies a password for encrypting the embedded data.
+-e encryption_algo: Optional. Specifies the encryption algorithm to use (e.g., AES256).
+-z compression_level: Optional. Specifies the compression level for the embedded data.
+
+===========================================================================================
+
+--------------Extracting Data---------
+
+=>steghide extract -sf stego_file [-p password] [-xf output_file]
+
+
+-sf stego_file: Specifies the path to the steganographic file from which data will be extracted.
+-p password: Optional. Specifies the password used to encrypt the embedded data.
+-xf output_file: Optional. Specifies the output file path where the extracted data will be saved.
+
+===========================================================================================
+
+---------------Viewing embedded data information-------
+
+=> steghide info stego_file
+
+------------------------
+
+---------------Changing Embedding Parameters---------
+
+steghide change -ef embedded_file -sf stego_file [-p old_password] [-n new_password] [-e encryption_algo] [-z compression_level]
+
+-------------------------------------------
+
+kali> man steghide 
+
+For consult the documentation available online. 
