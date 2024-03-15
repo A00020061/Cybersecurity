@@ -1,4 +1,4 @@
-=>How to detect SQL injection vulnerabilities------------
+l=>How to detect SQL injection vulnerabilities------------
 You can detect SQL injection manually using a systematic set of tests against every entry point in the application. To do this, you would typically submit:
 
 The single quote character ' and look for errors or other anomalies.
@@ -71,3 +71,7 @@ Answer: ' order by 1 (it's means 1 column exist)
 
 Step 2 will displays all database's tables through 'information_schema.tables' payload. Moreover, step 3 will do the same thing returns all columns. Lastly, Step 4 will return username and password
 from specific table.
+
+=> Condition retrieving multiple values in single column:
+
+' UNION SELECT NULL,username||':'||password FROM users--
