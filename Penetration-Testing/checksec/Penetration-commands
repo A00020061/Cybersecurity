@@ -1,0 +1,29 @@
+----------------checksec------------------
+kali> checksec --file=file.txt
+
+'checksec' command in kali is used to check the security properties of executable files like ASLR, NX, PIX, RELRO.
+
+--------------------strings---------------
+kali> strings <binary_file>
+
+It is used to extract human-readable strings from binary files. It's particulary useful for examining executable files, libraries, and other binary formats to find plaintext strings embedded
+within them.
+
+------------------$PATH----------------------
+kali> echo $PATH
+
+$PATH is an environment variable used to define the directories where the system looks for executable files when you type a command into the terminal. when you enter a command in the terminal,
+system searches through each directory listed in the $PATH variable. 
+
+for example: /usr/local/sbin:/usr/local/bin:/usr/bin:/sbin:/bin:snap/bin
+
+/usr/local/sbin: specific to the local system and are not provided by OS.
+/usr/local/bin: Contains executable files but is generally used for commands available to all users.
+/usr/sbin: Holds system administrator commands are not essential for normal system operation. Used for maintenance and troubleshooting tasks.
+/usr/bin: Most user commands and utilities installed by the operating system's package manager are located here.
+/sbin: similar to '/usr/sbin'
+/bin: system commands required for booting the system and basic system operations are stored 
+
+when you type 'ls' into the terminal, the system will search for an executable file named 'ls' in each directory listed in the $PATH variable
+
+------------------------------------------------
