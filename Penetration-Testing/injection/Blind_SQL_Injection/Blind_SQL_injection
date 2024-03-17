@@ -60,6 +60,9 @@ both exist.)
 
 => 200 response => user does not exist in database
 
+TO_CHAR()=> In Oracle, it is used to convert a value of any datatype to a string datatype.
+LIMIT 1 => It is used to restrict the number of rows returned by the query to just one row.
+
 
 4) Determine length of password
 
