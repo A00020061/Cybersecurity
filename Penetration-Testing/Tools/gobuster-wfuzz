@@ -1,0 +1,13 @@
+Gobuster => Primarily used for directory and file brute-forcing. It's focused on finding hidden directories and files within a web server.
+
+kali> gobuster dir -w /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt -u http://10.10.10.10
+
+Kali> gobuster dir -u http://10.10.10.10 -w /usr/share/wordlists/dirb/common.txt -t 15
+
+
+WFUZZ=> More versatile and designed for web application testing. It can perform not only director and file brute forcing but also
+parameter brute-forcing, fuzzing attacks, and more.
+
+wfuzz -u http://10.10.11.1/FUZZ -w /usr/share/wordlists/dirb/common.txt --sc 200
+
+--sc => status code 
