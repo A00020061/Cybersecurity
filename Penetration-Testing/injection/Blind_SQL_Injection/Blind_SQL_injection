@@ -44,6 +44,12 @@ To avoid the mistake and for 1 entry have to use rownum = 1)
 
 ' || (select '' from users where username = 'administrator') || ' (It is hard to determine the username does exist or not)
 
+==========================================================================================================================
+=>Blind SQL injection with Conditional Errors: That cause the application to generate different error responses based on whether the injected condition is true or false.
+
+=> Instead of relying on error messages, the attacker constructs SQL queries that yield different responses from the application based on whether the injected condition is true or false.
+
+
 Case Expression in Oracle
 
 ' || (select CASE WHEN (1=1) THEN TO_CHAR(1/0) ELSE '' END FROM dual) || ' (1=1 will be true and will get invalid result because of 1/0)
