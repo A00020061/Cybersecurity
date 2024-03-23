@@ -1,3 +1,5 @@
+Tools=> steghide and exiftool
+
 => 'steghide' is a command-line tool used for hiding and extracting data (usually files) within image and audio files. It employs steganography, which is the practice of concealing a file,
 message, image, or video within another file, message, image, or video. This process allows for hidden communication or secret storage of information. 
 
