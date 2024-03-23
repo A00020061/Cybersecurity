@@ -1,0 +1,4 @@
+-------SSID|BSSID ---------------
+=>SSID (Service Set Identifier) is the name of the wireless network. It is used to identify and differentiate between different wireless networks.
+=>BSSID (Basic Service Set Identifier) is the MAC address of the access point or router that provides the wireless network. It uniquely identifies a specific access point within a wireless network.
+
