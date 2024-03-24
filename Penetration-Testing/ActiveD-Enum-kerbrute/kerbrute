@@ -1,0 +1,42 @@
+=> Microsoft Windows Kerberos is an authentication protocol used in Windows environment to verify the identities
+of users or services attempting to access resources within a network.
+
+Here's how it works:
+
+Authentication: When a user or service attempts to access a resource (like files, printers, or applications) on a network, they provide their credentials to prove their identity.
+
+Ticket Granting Ticket (TGT): Upon successful authentication, the Key Distribution Center (KDC) issues the user or service a Ticket Granting Ticket (TGT), which serves as proof of authentication.
+
+Service Ticket: When the user or service wants to access a specific resource, they request a Service Ticket from the KDC. The KDC verifies the TGT and issues a Service Ticket for the requested resource.
+
+Authorization: The user or service presents the Service Ticket to the resource they want to access. If the ticket is valid, the resource grants access.
+
+Examples: File sharing, print services, email services, and database access. 
+
+
+------------------Kerbrute-----------------------------------------------------
+Kerbrute is a tool used for performing Kerberos-based brute force attacks. It is typically used to 
+test the security of Active Directory environments by attempting to guess users's passwords through
+brute force attacks against the kerberos protocol.
+
+Briefly: It is used to enumerate username by exploiting kerberos authentication.
+
+
+Commands:
+
+Can download the binary files from github.
+
+kali> sudo ./kerbrute_linux_amd64 --help
+
+Available Commands:
+1: bruteforce=>Bruteforce username:password combos
+2: Bruteuser=> Bruteforce a single user's password from a wordlist
+3: userenum=> Enumerate valid domain usernames via kerberos
+4: passwordspray=> Test a single password against a list of users
+
+kali> sudo ./kerbrute_linux_amd64 userenum -d service.local ./user.txt --dc 10.10.135.182
+
+--dc: Specifies the IP address of the domain controller to target.
+-d: Specifies the name of the target domain.
+-users: Specifies a list of usernames of enumerate. This could be a file containing a list of usernames
+or a single username.
