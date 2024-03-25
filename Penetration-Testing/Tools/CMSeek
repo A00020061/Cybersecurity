@@ -1,0 +1,15 @@
+-------------------------CMSeek------------------------
+CMSeek is a free and open source Python based CMS detection and Exploitation tool for websites or web apps with CMSeek you will be able to detect over 170 CMS.
+
+Installation:
+link: git clone https://github.com/TUhinshubhra/CMSeek
+
+cd CMSeek
+
+Normal scan: python3 cmseek.py -u <target-url>
+
+usage: python3 cmseek.py
+
+Update: cmseek.py --update
+
+Please note, all you scan results are stored in a Json file named 'reports.json'.
