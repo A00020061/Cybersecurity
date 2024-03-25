@@ -14,14 +14,14 @@ print()
 
 => Types of XSS attacks?
 
-1: Reflected XSS
-2: Stored XSS
-3: DOM-based XSS
+1: Reflected XSS (It reflects the query result immediately)
+2: Stored XSS (It store the query in database and wait until executed by user visiting the page like 'post comment'
+3: DOM-based XSS (It is used to manipulate the HTML of the page called DOM)
 
 -> Reflected XSS: is the simplest variety of cross-site scripting. It arises when an application receives data in an HTTP request and includes that data within the immediate response in an
 unsafe way.
 
---------------------####------------------------------------
+--------------------Reflected XSS------------------------------------
 https://insecure-website.com/status?message=All+is+well.
 <p>status: all is well.</p> 
 
@@ -29,3 +29,19 @@ The applicationi doesn't perform any other processing of the data, so an attacke
 
 https://insecure-website.com/status?message=<script>/*+bad+stuff+here...+*/</script>
 <p>status: <script>/* bad stuff here--*/</script></p>
+
+-----------------Stored XSS----------------------------
+<script>alert('you are hacked')</script>
+
+For example, when you add the query in comment of any post.
+
+
+-----------------DOM XSS ----------------------------
+<img src="unsecure.com/resources/images/product?searchitem=hackyou" onload="alert()>
+
+Added DOM XSS query=> hackyou" onload="alert()
+-----------------------------------------------------
+
+View source code vs Script 
+
+View source code does not show DOM manipulation, only show real source code retrive from server. But script code showes DOM manipulation. 
