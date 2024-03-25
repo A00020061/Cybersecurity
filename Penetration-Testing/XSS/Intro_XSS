@@ -40,8 +40,16 @@ For example, when you add the query in comment of any post.
 <img src="unsecure.com/resources/images/product?searchitem=hackyou" onload="alert()>
 
 Added DOM XSS query=> hackyou" onload="alert()
+
+Question: what is sink like document.write sink | innerHTML sink
+
+If we directly pass '<script>alert(3)</script> would not be executed because it is part of security so we need to pass something like <img src='0' onerror=alert(1)>. It is not compulsory to 
+pass <img> tag, can be pass something else. 
 -----------------------------------------------------
 
 View source code vs Script 
 
 View source code does not show DOM manipulation, only show real source code retrive from server. But script code showes DOM manipulation. 
+
+
+-
