@@ -1,0 +1,10 @@
+To connect to a Windows device via port 3389 from a kali linux machine, can use the 'rdesktop' or 'xfreerdp' command line utilities.
+
+Install 'rdesktop'
+
+kali> sudo apt-get install rdesktop
+
+kali> rdesktop -u <username> -p <password> <target-IP-Address>
+
+
+

@@ -1,0 +1,9 @@
+------------------------------Evil-WinRM-------------------------------------
+Evil-WinRM is a tool used for penetration testing and post-exploitation in Windows environments.
+It provides a CLI for interacting with Windoes systems remotely over WinRM (Windows Remote Management)
+protcol. 
+
+Remote Desktop Connection is a GUI.
+
+kali> evil-winrm -i <target-IP-address> -u <username> -p <password>
+
