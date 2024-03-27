@@ -1,0 +1,26 @@
+There are numberous places we can collect information on the target:
+
+1: Maltego
+2: Google Hacking (dorking)
+3: LinkedIn, Facebook, and Twitter
+4: BeEF or the Browser Exploitation Framework
+5: Spoof SMS
+6: Wi-Fiphisher
+7: Fileformat Vulnerabilities
+
+---------------BeEF-------------------------------------------------
+kali> sudo apt install beef-xss
+
+kali> beef-xss
+
+
+-----------------Wi-Fi Phisher--------------------------------------
+kali> sudo apt install wifiphisher
+
+kali> wifiphisher -help
+
+kali> wifiphisher
+
+
+----------------Metasploit------------------------------------------
+msf5> search type:exploit fileformat
