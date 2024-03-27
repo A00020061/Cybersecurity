@@ -1,0 +1,66 @@
+These techniques are often termed 'passive reconnaissance' because the hacker gathers iniformation without interacting with the target.
+
+1: Google Hacking
+2: Netcraft
+3: Shodan
+4: DNS
+5: p0F (passive operating system detection)
+6: Whois
+7: dig
+
+
+
+----------------------Google hacking keywords------------------------
+allinachor | allintext | allintitle | allinurl | filetype | inanchor | intext | intitle | inurl | link | site
+
+example:
+intitle:hacker-arise
+filetype:xls
+filetype:xls site:gov inurl:contact
+filetype:xls inurl:email.xls
+inurl:index.php?id=
+intitle:"site administration:please log in"
+intitle:"curriculm vitae: filetype:doc
+filetype:sql intext:password | pass | passwd
+intext:username intext:INSERT INTO `users` VALUES
+
+--------------------------Whois-------------------------------------
+whenever anyone register a domain, they are required to provide some necessary information about themselve and their company. This information can include the nameserver, register, contact name,
+address, phone number, and email address. 
+kali>whois facebook.com	
+
+------------------------------Shodan's Search Syntax---------------------
+Shodan has few keyboards that can help us narrow our search to specific interfaces,such as
+
+after/before:
+country: (like country: IN port 5060 or cisco country: IN or cisco country: IN port: 5060 net: 65:45:86:89/24)
+hostname:
+net:
+geo:
+os:
+port:
+
+-----------------------------dig----------------------------------------
+kali> dig microsoft.com ns (for nameserver)
+
+kali> dig microsoft.com mx (mail exchange)
+
+kali> dig @75.45.45.65 microsoft.com axfr
+
+finally, we can attempt to do a zone transfer ( in DNS terminlogy, a zone transfer is an update to DNS records) on microsoft.com by entering.
+
+where @75.45.45.65 is the IP address of the DNS server, and axfr is the command for a zone transfer.
+
+
+----------------------------Bruteforceing subdomins using 'dnsenum.pl'-----------------
+
+Open the terminal and enter 'dnsenum' at the prompt
+
+kali> dnsenum.pl <domain>
+
+kali> dnsenum.pl -f /usr/share/dnsenum/dns.txt kali.org
+
+-----------------------------p0F--------------------------------------
+kali> p0F -h
+
+kali> p0F -i eth0
