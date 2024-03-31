@@ -1,0 +1,82 @@
+Active-reconn Tools:
+
+1: Nmap
+2: Hping
+3: Whatweb
+4: Builtwith
+
+---------------Nmap----------------------
+kali>nmap -help
+
+------Basic TCP Scan-------------------
+kali> nmap -sT <IP-Address>
+
+The simplest, fastest and most reliable nmap scan is the TCP scan. It send TCP packet to attempt a TCP three-way handshake (SYN-SYN/ACK-ACK)on each port it scans. If the target system completes
+the three-way handshake, the port is considered open. The key nmap option is -sT or scan TCP. 
+
+---------Basic UDP Scan ----------------
+Kali> nmap -sU <IP-Address>
+
+--------Single-Port-Scan---------
+Kali> nmap -sT 192.168.0.157 -p445
+
+Kali> nmap -sT 192.168.2.157/24 -p445
+
+---------Get the OS, the services, and their Versions (-A)---------
+
+Kali> nmap -sT -A 192.168.2.145
+
+
+------------------Hping3------------------
+
+Unlike nmap, though, hping3 requires a bit more user input to be effective. For example, when we scan with nmap, nmap will interpret the results for us. On the other hand, hping3 will give 
+us raw packet responses and we need to do the interpretation ourselves. This is probably one of the primary reasons phing3 is not as popular as nmap for scanning. 
+
+kali> hping3 -h
+
+----------Default mode for port scanning-----------
+
+-S => SYN similar to = nmap -sS <IP> -p 445
+++1 => Scan all ports = nmap -p- <IP>
+
+kali> hping3 -S 192.168.12.25 -p 80
+
+kali> hping3 -S 192.168.56.25 -p 445
+
+------------------Fragmenting Packets---------------
+
+You can sometimes bypass security devices such as IDSs and firewalls by fragmenting the packets. We can do this with hping3 by using the -f switch such as 
+
+Kali> hping3 -S -f 192.168.4.68 -p 445
+
+
+--------------Get the System Uptime--------------
+
+One of the really interesting things we can do with hping3 is to check how long the system has been up and running. The TCP protocol has a field named 'timestamp' that calculates the seconds since the OS
+was last booted up. We can retrieve that value by using the '-tcp-timestamp'
+
+Kali> hping3 --tcp-timestamp -S google.com -p 80
+
+
+
+-----------------------------------whatweb or Netcraft----------------------
+
+whatweb is a python script that probes the website for signature of the server, the CMS and other technologies used to develop the site. Once we know what technologies the website is running,]
+we can run vulnerability scans to find known vulnerabilities and develop an attack strategy.
+
+One of the key advantage of whatweb over 'Netcraft' is that Netcraft only collect and indexs the most active sites, while we can use whatweb against any website at all, even the smallest.
+
+kali> whatweb -h
+
+kali> whatweb <URL> (whatweb softcodings.com)
+
+
+
+---------------------------------------Builtwith Web Technologies-------------------
+
+whatweb is an excellent tool for determining the technologies used in a website, but it is always a good idea to have multiple arrows in our hacker quiver. The website www.builtwith.com does
+a similar task and analysis. Some of its basic capabilities are offered for free, but to use All its capabilities you need to register and pay an annual fee.
+
+
+'builtwith' is an excellent tool for determining the technologies used in websites. Both the website and browser plugin are capable of probing the website and returning a detailed list
+of the technologies used. 
