@@ -1,0 +1,24 @@
+To login to a POP3 server from the command line in kali, we can use 'telnet' command
+
+kali> telnet <server-ip> <port>
+
+kali> telnet 10.10.130.199 110
+
+Then 
+
+Send the username:
+USER username
+
+PASS password
+
+You can not use command like ls, cat, cd, or pwd inside a POP3 session. it is a protocol used for 
+retrieving emails from a mail server. It is a text based protocol where you send commands to the server
+and receive response, but it is limited to specific commands related to email retrieval.
+
+USER: specify username
+PASS: specify password
+STAT: Get the number of message in the mailbox
+LIST: LIst the message number and sizes
+RETR: REtrieve a specific number
+DELE: Mark a message for deletion
+QUIT: Close the connection and logout
