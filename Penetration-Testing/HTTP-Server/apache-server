@@ -1,0 +1,22 @@
+kali> sudo apt update
+
+kali> sudo apt install apache2
+
+kali> systemctl start apache2 (Start Apache2)
+
+kali> systemctl status apache2 (Check status)
+
+By default apache server files from the '/var/www/html' directory. you can place your website files or content in this
+directory. if you need more advanced configuration, you can modify apache's configuration 
+files located in '/etc/apache2/'
+
+Access Apache from Target Device: on the target device, open a web browser and enter the IP
+address of your kali mahcine followed by '/' or '/index.html'/
+
+http://<kali-machine-IP-address>
+
+----------------------------------------
+If the devices are on the same local network (e.g., connected to the same Wi-Fi network or LAN), they can typically communicate with each other using their local IP addresses. In this case, you can access the Apache server using the Kali Linux machine's local IP address from the other device's web browser.
+
+However, if you want to access the Apache server from a device outside your local network (e.g., over the internet), you would need to set up port forwarding on your
+router to forward incoming traffic on port 80 to the internal IP address of your Kali Linux machine. This process varies depending on your router's make and model, so you would need to consult your router's documentation for specific instructions on how to set up port forwarding.
