@@ -1,0 +1,5 @@
+kali> find / -type f -name <file-name> (Find specific file)
+kali> find / -name 'my-txt' (find all files named 'my-txt')
+kali> find / -type d -name <dir-name> (find directory named)
+kali> find / -type d -empty -delete (find and remove all empty direcotires)
+kali> find / -type f -name "*.tmp" -delete (find and remove 
