@@ -11,3 +11,10 @@ parameter brute-forcing, fuzzing attacks, and more.
 wfuzz -u http://10.10.11.1/FUZZ -w /usr/share/wordlists/dirb/common.txt --sc 200
 
 --sc => status code 
+
+---------------------ffuf--------------------------------
+
+kali> ffuf -w <wordlist> -u <ip address>:FUZZ -fs 0 -mc 200
+
+=> -fs 0 (will filter the 0 size file)
+=> -mc 200 (Match code flag with 200)
