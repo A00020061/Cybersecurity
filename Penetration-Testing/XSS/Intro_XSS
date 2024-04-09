@@ -43,6 +43,9 @@ Added DOM XSS query=> hackyou" onload="alert()
 
 Question: what is sink like document.write sink | innerHTML sink
 
+------------------DOM XSS----------------------------
+http://....../returnpath=/ (we can do that http://......./returnpath=javascript:alert(document.cookie)
+
 If we directly pass '<script>alert(3)</script> would not be executed because it is part of security so we need to pass something like <img src='0' onerror=alert(1)>. It is not compulsory to 
 pass <img> tag, can be pass something else. 
 -----------------------------------------------------
