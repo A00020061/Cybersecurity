@@ -40,3 +40,19 @@ kali> sudo ./kerbrute_linux_amd64 userenum -d service.local ./user.txt --dc 10.1
 -d: Specifies the name of the target domain.
 -users: Specifies a list of usernames of enumerate. This could be a file containing a list of usernames
 or a single username.
+
+
+---------------------AR-REP (authentication services response) attack--------
+AS-REP Roasting is a technique used in Kerberos authentication environments for attacking weak user passwords. It takes advantage of a feature in the Kerberos protocol where the Ticket Granting Ticket (TGT) can be requested without presenting a pre-authentication token (a timestamp encrypted with the user's password).
+
+When a user account is configured with "Do not require Kerberos pre-authentication" flag set, an attacker can request an AS-REP (Authentication Service Response) ticket for that user 
+account without providing a pre-authentication token. The attacker can then attempt to crack the encrypted part of the AS-REP ticket offline, which typically contains the user's TGT 
+encrypted with the user's password hash. If the password is weak, it can be cracked, allowing the attacker to impersonate the user and potentially escalate privileges.
+
+-----------------GETNPUsers------------------------------
+In Kali Linux, GetNPUsers is a part of the Impacket toolkit, which is a collection of Python classes for working with network protocols. Specifically, GetNPUsers is a tool used for performing a specific type of attack against Active Directory environments called "ASREPRoasting."
+
+ASREPRoasting is a technique used to extract password hashes from user accounts in an Active Directory domain where Kerberos pre-authentication is disabled. It exploits the fact that certain accounts, such as service accounts, are not required to perform pre-authentication when requesting a Ticket Granting Ticket (TGT) from the Key Distribution Center (KDC).
+
+GetNPUsers works by requesting TGTs for specified user accounts without providing pre-authentication data. It then attempts to crack the TGTs offline to obtain the password hashes of 
+the targeted user accounts. These password hashes can then be subjected to brute-force attacks or other cracking techniques to recover the plaintext passwords.
