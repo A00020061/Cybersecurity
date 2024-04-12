@@ -56,3 +56,16 @@ ASREPRoasting is a technique used to extract password hashes from user accounts 
 
 GetNPUsers works by requesting TGTs for specified user accounts without providing pre-authentication data. It then attempts to crack the TGTs offline to obtain the password hashes of 
 the targeted user accounts. These password hashes can then be subjected to brute-force attacks or other cracking techniques to recover the plaintext passwords.
+
+
+-----------------------'services' command--------------
+kali> services 
+
+It will display all currently commands
+
+------------------------sc.exe config <service name> binPATH:<binary path>----------
+kali> sc.exe config <service name> binPATH:<binary path>
+
+It will modify, create, delete the running serivces only windows systems.
+
+--------------------------------------------
