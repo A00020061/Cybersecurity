@@ -49,7 +49,12 @@ When a user account is configured with "Do not require Kerberos pre-authenticati
 account without providing a pre-authentication token. The attacker can then attempt to crack the encrypted part of the AS-REP ticket offline, which typically contains the user's TGT 
 encrypted with the user's password hash. If the password is weak, it can be cracked, allowing the attacker to impersonate the user and potentially escalate privileges.
 
------------------GETNPUsers------------------------------
+-----------------GETNPUsers--------------------------------------
+
+Kali>python3 GetNPUsers.py -dc-ip <ip-address> -request <domain-name> -userfile <file path> -format hashcat
+
+if GetNPUsers file not found, try to run the above command in which directory hold that file.
+
 In Kali Linux, GetNPUsers is a part of the Impacket toolkit, which is a collection of Python classes for working with network protocols. Specifically, GetNPUsers is a tool used for performing a specific type of attack against Active Directory environments called "ASREPRoasting."
 
 ASREPRoasting is a technique used to extract password hashes from user accounts in an Active Directory domain where Kerberos pre-authentication is disabled. It exploits the fact that certain accounts, such as service accounts, are not required to perform pre-authentication when requesting a Ticket Granting Ticket (TGT) from the Key Distribution Center (KDC).
@@ -65,6 +70,8 @@ It will display all currently commands
 
 ------------------------sc.exe config <service name> binPATH:<binary path>----------
 kali> sc.exe config <service name> binPATH:<binary path>
+
+Note: 'sc.exe' is used when you are using command prompt but 'cmd.exe' for powershell prompt.
 
 It will modify, create, delete the running serivces only windows systems.
 
