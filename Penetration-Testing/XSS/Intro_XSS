@@ -55,4 +55,20 @@ View source code vs Script
 View source code does not show DOM manipulation, only show real source code retrive from server. But script code showes DOM manipulation. 
 
 
--
+------------------DOM XSS in jQuery selector sink using a hashchange event------------------------
+
+example: https://test.com?query=product
+
+Above command will return the output related to 'product' through '?query' search. In this case if I want to get hacked user cookies, they need to click on the click to make the query executable.
+
+Is there are any way to execute the link without clicking?
+
+Yes, we need to draft the URL in '<iframe></iframe>' in which includes '<img> tag.
+
+kali> <iframe src="https://test-website.com/#" onload="this.src+='<img src=145 onerror=print()>'"</iframe>
+
+
+important commands for console (chrome):
+window.location (will return website's URL)
+location.search (will return the query like '?query=product" from https://test-website.com?query=search)
+location.hash (will return query after '#' like 'product' from https://test-website.com#product)
