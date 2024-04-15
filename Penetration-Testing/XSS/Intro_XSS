@@ -33,6 +33,10 @@ https://insecure-website.com/status?message=<script>/*+bad+stuff+here...+*/</scr
 -----------------Stored XSS----------------------------
 <script>alert('you are hacked')</script>
 
+Stored XSS into anchor 'href' attribute with double quotes HTML-encoded.
+
+javascript:alert('you are hacked')
+
 For example, when you add the query in comment of any post.
 
 
@@ -72,3 +76,5 @@ important commands for console (chrome):
 window.location (will return website's URL)
 location.search (will return the query like '?query=product" from https://test-website.com?query=search)
 location.hash (will return query after '#' like 'product' from https://test-website.com#product)
+
+
