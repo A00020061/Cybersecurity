@@ -25,6 +25,10 @@ unsafe way.
 https://insecure-website.com/status?message=All+is+well.
 <p>status: all is well.</p> 
 
+example: <img src="/resources/images/tracker.gif?searchTerms=<code>"
+
+Solution: '-alert(234)-' or '+ alert(2345) +'
+
 The applicationi doesn't perform any other processing of the data, so an attacker can easily construct an attack like this:
 
 https://insecure-website.com/status?message=<script>/*+bad+stuff+here...+*/</script>
