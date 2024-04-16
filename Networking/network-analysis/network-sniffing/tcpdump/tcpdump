@@ -1,0 +1,6 @@
+tcpdump can be particularly useful if you have to analyze a non-GUI based system or a remote system where a GUI would be slow, inefficient, and not very stealthy.
+
+Kali> tcpdump (start tcpdump capturing packets)
+
+kali> tcpdump -w file.cap (capture the output and save in 'file.cap' file)
+
