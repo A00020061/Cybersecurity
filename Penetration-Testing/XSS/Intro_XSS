@@ -81,4 +81,7 @@ window.location (will return website's URL)
 location.search (will return the query like '?query=product" from https://test-website.com?query=search)
 location.hash (will return query after '#' like 'product' from https://test-website.com#product)
 
+------------------------DOM XSS in AngularJS expression with angle brackets and double quotes HTML-encoded---------
+{{$eval.constructor('alert()')()}}
+
 
