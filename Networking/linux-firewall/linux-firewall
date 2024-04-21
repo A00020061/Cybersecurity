@@ -1,0 +1,43 @@
+-------------------------------iptables------------------
+iptables is a flexible firewall utility built for linux. It uses the command line to setup policy chains to allow or block traffic.
+
+-------------------------------iptables Basics-------------
+=>installation: sudo apt install iptables
+
+=> Configuring the default policy: 
+kali> sudo iptables -L
+
+=> iptables -h
+kali> sudo iptables -h
+
+--------------Important key points (-A), (-D), (-L), (-s), (-d), (-j)--------
+-A => Append
+-D => Delete
+-L => List
+-s => source address
+-d => destination address
+-j => jump means DROP or ACCEPT
+
+Rule 1: DROP connection to amazon.com website 
+
+kali> sudo iptables -A OUTPUT -d amazon.com -j DROP
+
+Rule 2: ACCEPT connection from officework on Port 443
+
+Kali> sudo iptables -A INPUT -s officeworks.com.au -p TCP -sport 443 -j ACCEPT
+
+Rule 3: ONLY ACCEPT connection to hackers-arise.com on port 80 or 443 except it DROPS all.
+
+Kali> sudo iptables -A OUTPUT -d hackers-arise.com -p TCP --dport 80 -j ACCEPT
+
+Kali> sudo iptables -A OUTPUT -d hackers-arise.com -p tcp --dport 443 -j ACCEPT
+
+Kali> sudo iptables -A OUTPUT -p tcp --dport 443 -j DROP
+
+Kali> sudo iptables -A OUTPUT -p tcp --dport 80 -j DROP
+
+
+-----------------How to flush all policy or delete from iptables---------------
+
+kali> sudo iptables -F
+
