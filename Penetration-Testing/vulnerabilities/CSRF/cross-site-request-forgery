@@ -1,0 +1,13 @@
+CSRF is a web security vulnerability that allows an attacker to induce users to perform actions that they do not intend to perform. It allows an attacker to p[artly circumvent the same origin policy
+, which is designed to prevent different websites from interfering with each other.
+
+For example: This is might be to change the email address on their account, to change their password, or to make a funds transfer. Depending on the nature of the action, the attacker might be able to 
+gain full control over the user's account. If the compromised user has a privileged role withi8n the application, then the attacker might be able to take full control of all the application's 
+data and functionality.
+
+<form acttion="https://dummy-site.com/my-account/change-email" method='POST'>
+  <input type='hidden' name='email' value='hacker@gmail.com'>
+</form>
+<script>document.forms[0].submit():</script>
+
+
