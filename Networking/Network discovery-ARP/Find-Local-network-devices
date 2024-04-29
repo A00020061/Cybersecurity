@@ -3,3 +3,7 @@ kali> sudo arp-scan --localnet (it provides more detailed information about the 
 kali> nmap -sn 192.168.0.1/24 (it provides information about hosts that respond to ICMP echo requests.)
 
 -sn => 'no port scan' 
+
+----------------Network Manager Commands-------------
+kali> nmcli dev show
+
