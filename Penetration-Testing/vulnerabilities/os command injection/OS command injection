@@ -1,0 +1,11 @@
+OS command injection is also known as shell injection. It allows an attacker to execute operating system command on the server that is running an application, and typically fully compromise
+the application and its data.
+
+Forexample: https://insecure-website.com/stockstatus?productID=381&storeID=29|whoami
+
+Please note:
+1: &
+2: &&
+3: |
+4: ||
+5: ;
